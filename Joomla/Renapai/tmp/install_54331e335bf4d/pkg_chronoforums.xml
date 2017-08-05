@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<extension type="package" version="1.6">
+	<name>ChronoForums Package</name>
+	<author>ChronoEngine.com Team</author>
+	<creationDate>August 2014</creationDate>
+	<packagename>chronoforums</packagename>
+	<version>V1.1</version>
+	<license>GPL</license>
+	<url>http://www.chronoengine.com/</url>
+	<packager>ChronoEngine.com Team</packager>
+	<packagerurl>http://www.www.chronoengine.com.com/</packagerurl>
+	<description>ChronoForums extension package (Component + CEGCore library)</description>
+	<files folder="packages">
+		<file type="library" id="cegcore">cegcore.zip</file>
+		<file type="component" id="chronoforums" >com_chronoforums.zip</file>
+	</files>
+</extension>

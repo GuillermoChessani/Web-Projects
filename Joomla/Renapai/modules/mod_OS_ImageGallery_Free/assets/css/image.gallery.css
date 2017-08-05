@@ -1,0 +1,82 @@
+/**
+ * @package OS_ImageGallery_Free
+ * @subpackage  mod_OS_ImageGallery_Free
+ * @copyright Andrey Kvasnevskiy-OrdaSoft(akbet@mail.ru); Anton Panchenko(nix-legend@mail.ru); Sergey Bunyaev(sergey@bunyaev.ru); Sergey Solovyev(solovyev@solovyev.in.ua)
+ * @Homepage: http://www.ordasoft.com
+ * @version: 1.0 
+ * @license GNU General Public License version 2 or later; see LICENSE.txt
+ **/
+.imageGallery {text-align: center;}
+.rowImages {
+    width: 100%; 
+    overflow: hidden;
+    display: inline-block;
+}
+.imageGallery .rowImages .fancybox h3 {
+    bottom: 0;
+    color: #fff;
+    font: 300 21px 'Roboto',Arial,sans-serif;
+    height: 30px;
+    left: 0;
+    letter-spacing: -1px;
+    margin: auto;
+    position: absolute;
+    right: 0;
+    text-align: center;
+    text-transform: uppercase;
+    top: 0;
+}
+.rowImages .fancybox {
+    display: inline-block;
+    overflow: hidden;
+    margin: 1%;
+    position: relative;
+}
+.imageGallery .fancybox,
+.imageGallery .fancybox:hover {
+    background: none repeat scroll 0 0 transparent;
+    box-shadow: 0 0 3px rgba(0, 0, 0, 0.5);
+    line-height: 0;
+    text-decoration: none;
+    color: transparent;
+}
+/*__________________________ overlay __________________________*/
+.imageGallery .rowImages .fancybox .overlay {
+    background: url("../images/fancybox_overlay.png") repeat scroll 0 0 transparent;
+    height: 100%;
+    position: absolute;
+	left: 0;
+	right: 0;
+	top: 0;
+	bottom: 0;
+    opacity: 0;
+    filter: alpha(opacity=0);
+    width: 100%;
+-webkit-transition: all 0.5s ease 0s;
+   -moz-transition: all 0.5s ease 0s;
+ -khtml-transition: all 0.5s ease 0s;
+    -ms-transition: all 0.5s ease 0s;
+     -o-transition: all 0.5s ease 0s;
+        transition: all 0.5s ease 0s;
+}
+.imageGallery .rowImages .fancybox:hover .overlay {
+    opacity: 1;
+    filter: alpha(opacity=100);
+}
+/*__________________________ lens __________________________*/
+.imageGallery .rowImages .fancybox .overlay .lens { 
+    background-image: url("../images/zoom.png");
+    background-position: center center;
+    background-repeat: no-repeat;
+    bottom: 0;
+    left: 0;
+    position: absolute;
+    right: 0;
+    top: 0;
+}
+
+p.copy {
+    text-align: center;
+    font-size: 12px;
+    color: #787878;
+}

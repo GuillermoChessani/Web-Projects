@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension type="component" version="1.6.0" method="upgrade">
+	<name>ChronoForums</name>
+	<creationDate>24.August.2014</creationDate>
+	<author>Chronoman</author>
+	<copyright>ChronoEngine.com 2014</copyright>
+	<authorEmail>webmaster@chronoengine.com</authorEmail>
+	<authorUrl>www.chronoengine.com</authorUrl>
+	<version>1.1.1</version>
+	<license>GPL</license>
+	<description>The ChronoForums component is a forums extension your Joomla! website with many exciting features.</description>
+	
+	<scriptfile>install.chronoforums.php</scriptfile>
+	<uninstallfile>uninstall.chronoforums.php</uninstallfile>
+	<files>
+		<filename>chronoforums.php</filename>
+		<filename>router.php</filename>
+		<filename>index.html</filename>
+		<folder>views</folder>
+		<folder>chronoforums</folder>
+	</files>
+	<install>
+		<sql>
+			<file driver="mysql" charset="utf8">chronoforums/sql/initial.chronoforums.sql</file>
+		</sql>
+	</install>
+	<uninstall>
+		<sql>
+			<file driver="mysql" charset="utf8">chronoforums/sql/uninstall.chronoforums.sql</file>
+		</sql>
+	</uninstall>	
+	<administration>		
+		<menu img="components/com_chronoforums/cforums.png" link="com_chronoforums" view="main">COM_CHRONOFORUMS</menu>
+		<submenu>
+			<menu>COM_CHRONOFORUMS</menu>
+			<menu act="validateinstall">COM_CHRONOFORUMS_VALIDATE</menu>
+		</submenu>
+		<files folder="admin">
+			<filename>chronoforums.php</filename>
+			<filename>cforums.png</filename>
+			<filename>index.html</filename>
+			<folder>chronoforums</folder>
+			<folder>language</folder>
+		</files>
+		<languages folder="admin">
+			<language tag="en-GB">language/en-GB.com_chronoforums.sys.ini</language>
+			<language tag="en-GB">language/en-GB.com_chronoforums.menu.ini</language>
+			<language tag="en-GB">language/en-GB.com_chronoforums.ini</language>
+		</languages>
+	</administration>
+</extension>

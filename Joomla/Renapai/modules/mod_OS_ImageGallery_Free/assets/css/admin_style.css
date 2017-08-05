@@ -1,0 +1,441 @@
+/**
+ * @package OS_ImageGallery_Free
+ * @subpackage  mod_OS_ImageGallery_Free
+ * @copyright Andrey Kvasnevskiy-OrdaSoft(akbet@mail.ru); Sergey Bunyaev(sergey@bunyaev.ru); Sergey Solovyev(solovyev@solovyev.in.ua)
+ * @Homepage: http://www.ordasoft.com
+ * @version: 1.0
+ * @license  GNU General Public License version 2 or later; see LICENSE.txt
+ * */
+@import url(http://fonts.googleapis.com/css?family=Oswald:400,300,700|Quicksand:400,700,300);
+
+form div.tab-content div.tab-pane.active div.accordion-heading strong a {
+    color: #fff;
+    font-family: 'Oswald',  Arial !important;
+    font-size: 14px !important;
+    font-weight: 400 !important;
+    text-transform: uppercase;
+    line-height: 1;
+}
+form div.tab-content div.tab-pane.active div.accordion-heading strong a.accordion-toggle.collapsed {color: #3C3C3D !important;}
+form div.tab-content div.tab-pane.active div.accordion-heading strong a:focus {text-decoration: none;}
+form div.tab-content div.tab-pane.active div.accordion-heading strong a:active {color: red !important;}
+h1 {
+    font-family: 'Quicksand',  Arial;
+    color: #111;
+    font-size: 24px;
+    font-weight: 400;
+    line-height: 1;
+}
+h3 {
+    font-family: 'Oswald',  Arial !important;
+    font-size: 14px !important;
+    font-weight: 400 !important;
+    text-transform: uppercase;
+    line-height: 1;
+    margin: 4px 0;
+}
+input.required {
+    background-color: #D5EEFF;
+    border-radius: 3px 3px 3px 3px;
+    padding: 6px 7px;
+}
+h3.btl-pane-toggler, .btl-pane-toggler-down {
+    cursor: pointer;
+    padding: 15px 0 0 10px;
+    -webkit-transition: all 0.1s ease-out 0s;
+    -moz-transition: all 0.1s ease-out 0s;
+    transition: all 0.1s ease-out 0s;
+    height: 30px;
+}
+h3.title.pane-toggler-down, 
+form div.tab-content div.tab-pane.active div.accordion-heading strong a.accordion-toggle.collapsed {
+    background: #FFF2F5;
+    background: -moz-linear-gradient(top, #F4F5F7 0%, #EAEBED 100%);
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #F4F5F7), color-stop(100%, #EAEBED));
+    background: -o-linear-gradient(top, #F4F5F7, #EAEBED);
+    background: linear-gradient(to bottom, #F4F5F7, #EAEBED);
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#F4F5F7',  endColorstr='#EAEBED', GradientType=0 );
+    -webkit-box-shadow: 0 2px 1px rgba(134, 134, 134, 0.12);
+    -moz-box-shadow: 0 2px 1px rgba(134, 134, 134, 0.12);
+    box-shadow: 0 2px 1px rgba(134, 134, 134, 0.12);
+    border: 1px solid #dedede;
+    color: #3c3c3d !important;
+    padding: 15px 0px !important;
+    margin: 0px !important;
+}
+h3.pane-toggler.title, 
+    form div.tab-content div.tab-pane.active div.accordion-heading strong a.accordion-toggle {
+    background: #00A5E4 !important;
+    background: -moz-linear-gradient(top, #58A8F4 0%, #348DDF 100%) !important;
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #58A8F4), color-stop(100%, #348DDF)) !important;
+    background: -o-linear-gradient(top, #58A8F4, #348DDF) !important;
+    background: linear-gradient(to bottom, #58A8F4, #348DDF) !important;
+    filter:  progid:DXImageTransform.Microsoft.gradient( startColorstr='#58A8F4',  endColorstr='#348DDF', GradientType=0 ) !important;
+    -webkit-box-shadow: 0 2px 1px rgba(0, 0, 0, 0.19),  0 2px 1px rgba(255, 255, 255, 0.2) inset !important;
+    -moz-box-shadow: 0 2px 1px rgba(0, 0, 0, 0.19),  0 2px 1px rgba(255, 255, 255, 0.2) inset !important;
+    box-shadow: 0 2px 1px rgba(0, 0, 0, 0.19), 0 2px 1px rgba(255, 255, 255, 0.2) inset !important;
+    text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.4) !important;
+    border: 1px solid #1f6db6 !important;
+    padding: 15px 0px !important;
+    margin: 0px !important;
+}
+.btnButton input[name="file"] {
+    position: absolute;
+    top: 0;
+    right: 0;
+    margin: 0;
+    opacity: 0;
+    filter: alpha(opacity=0);
+    -webkit-transform: translate(0, 0) scale(4);
+    -moz-transform: translate(0, 0) scale(4);
+    -o-transform: translate(0, 0) scale(4);
+    -ms-transform: translate(0, 0) scale(4);
+    -khtml-transform: translate(0, 0) scale(4);
+    transform: translate(0, 0) scale(4);
+    font-size: 33px;
+    direction: ltr;
+    cursor: pointer;
+}
+/* Fix for IE 7: */
+* + html .btnButton { 
+    padding: 2px 15px; 
+    margin: 1px 0 0 0; 
+}
+.btnButton {
+  position: relative; 
+  overflow: hidden; 
+  display: inline-block;
+  *display: inline;
+  padding: 8px 12px;
+  margin-bottom: 0;
+  *margin-left: .3em;
+  font-size: 14px;
+  line-height: 20px;
+  color: #333;
+  text-align: center;
+  text-shadow: 0 1px 1px rgba(255, 255, 255, 0.75);
+  vertical-align: middle;
+  cursor: pointer;
+  color: #fff;
+  font-family: 'Oswald';
+  text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.25);
+  text-transform: uppercase;
+  background-color: #58A8F4;
+  *background-color: #58A8F4;
+  background-image: -moz-linear-gradient(top, #58A8F4, #348DDF);
+  background-image: -webkit-gradient(linear, 0 0, 0 100%, from(#58A8F4), to(#348DDF));
+  background-image: -webkit-linear-gradient(top, #58A8F4, #348DDF);
+  background-image: -o-linear-gradient(top, #58A8F4, #348DDF);
+  background-image: linear-gradient(to bottom, #58A8F4, #348DDF);
+  background-repeat: repeat-x;
+  border: 1px solid #1F6DB6;
+  *border: 0;
+  -webkit-border-radius: 3px 3px 3px 3px;
+     -moz-border-radius: 3px 3px 3px 3px;
+          border-radius: 3px 3px 3px 3px;
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#58A8F4', endColorstr='#348DDF', GradientType=0);
+  filter: progid:DXImageTransform.Microsoft.gradient(enabled=false);
+  *zoom: 1;
+  -webkit-box-shadow: 0 2px 1px rgba(0, 0, 0, 0.19), 0 2px 1px rgba(255, 255, 255, 0.2) inset;
+     -moz-box-shadow: 0 2px 1px rgba(0, 0, 0, 0.19), 0 2px 1px rgba(255, 255, 255, 0.2) inset;
+          box-shadow: 0 2px 1px rgba(0, 0, 0, 0.19), 0 2px 1px rgba(255, 255, 255, 0.2) inset;
+}
+.btnButton:hover {
+  color: #fff;
+  background-color: #348DDF;
+  *background-color: #348DDF;
+  background-image: -moz-linear-gradient(top, #348DDF, #58A8F4);
+  background-image: -webkit-gradient(linear, 0 0, 0 100%, from(#348DDF), to(#58A8F4));
+  background-image: -webkit-linear-gradient(top, #348DDF, #58A8F4);
+  background-image: -o-linear-gradient(top, #348DDF, #58A8F4);
+  background-image: linear-gradient(to bottom, #348DDF, #58A8F4);
+  background-repeat: repeat-x;
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#348DDF', endColorstr='#58A8F4', GradientType=0);
+  filter: progid:DXImageTransform.Microsoft.gradient(enabled=false);
+}
+h3.pane-toggler.title a span
+/*,form div.tab-content div.tab-pane.active div.accordion-heading strong a.accordion-toggle*/
+    {
+    color: #FFFFFF !important;
+    padding-left: 30px;
+    background: url('../images/passive_arrow.png') 0% 50% no-repeat !important;
+}
+h3.title.pane-toggler-down a span/*, 
+    form div.tab-content div.tab-pane.active div.accordion-heading strong a.accordion-toggle.collapsed*/
+    {
+    color:  #3C3C3D !important;
+    padding-left: 30px;
+    background: url('../images/active_arrow.png') 0% 50% no-repeat !important;
+}
+.text_propery {
+    font-size: 12px;
+    font-style: italic;
+    font-weight: 400;
+    line-height: 1.7;
+}
+.mod-desc a {outline: none !important;}
+#down_pictures {overflow: hidden;}
+.sepp_div {
+    border-bottom: 1px solid #d9d9d9;
+    clear: both;
+    margin: 40px 0;
+}
+.toggle-arrow {width: 100%;}
+.btl-panel input[type="text"],
+.btl-panel select,
+.adminformlist select,
+.adminform select,
+.adminformlist input,
+.btl-panel textarea,
+button.jform-rightbtn,
+.hasTipPreview,
+.blank a {
+    border-radius: 4px 4px 4px 4px;
+}
+.btl-panel input[type="text"],
+.btl-panel select,
+.adminform select,
+.adminformlist select,
+.adminformlist input,
+.btl-panel textarea,
+.blank a {
+    border: 1px solid #D3D3D3;
+    font-size: 11px;
+    padding: 7px;
+}
+.btl-panel input[type="text"],  .btl-panel select {width: 125px;}
+input:focus,  select:focus,  textarea:focus {
+    -webkit-background-color: rgba(0, 132, 255, 0.33) !important;
+    -moz-background-color: rgba(0, 132, 255, 0.33) !important;
+    background-color: rgba(0, 132, 255, 0.33) !important;
+    border: 1px solid #1f6db6 !important;
+}
+.btl-panel textarea {
+    width: 345px !important;
+    min-height: 120px;
+}
+.button2-left, .button2-left .blank {background: none !important;}
+button.jform-rightbtn {padding: 5px 14px;}
+.blank a, .blank a:hover {padding:  2px 10px !important;}
+span.hasTipPreview {
+    cursor: pointer;
+    display: block;
+    padding: 7px;
+}
+.blank a, .hasTipPreview, 
+button.jform-rightbtn {
+    background: #FFF2F5;
+    background: -moz-linear-gradient(top, #F4F5F7 0%, #EAEBED 100%);
+    background: -webkit-gradient(linear,  left top,  left bottom, color-stop(0%, #F4F5F7), color-stop(100%, #EAEBED));
+    background: -o-linear-gradient(top, #F4F5F7, #EAEBED);
+    background: linear-gradient(to bottom, #F4F5F7, #EAEBED);
+    filter:  progid:DXImageTransform.Microsoft.gradient( startColorstr='#F4F5F7',  endColorstr='#EAEBED', GradientType=0 );
+    -webkit-box-shadow: 0 2px 1px rgba(134, 134, 134, 0.12);
+    -moz-box-shadow: 0 2px 1px rgba(134, 134, 134, 0.12);
+    box-shadow: 0 2px 1px rgba(134, 134, 134, 0.12);
+    border: 1px solid #dedede;
+    color: #3c3c3d !important;
+    margin: 5px !important;
+}
+.blank a:hover, 
+button.jform-rightbtn:hover {
+    background: #00A5E4;
+    background: -moz-linear-gradient(top, #58A8F4 0%, #348DDF 100%);
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #58A8F4), color-stop(100%, #348DDF));
+    background: -o-linear-gradient(top, #58A8F4, #348DDF);
+    background: linear-gradient(to bottom, #58A8F4,  #348DDF);
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#58A8F4', endColorstr='#348DDF', GradientType=0 );
+    -webkit-box-shadow:  0 2px 1px rgba(0, 0, 0, 0.19);
+    -moz-box-shadow: 0 2px 1px rgba(0, 0, 0, 0.19);
+    box-shadow: 0 2px 1px rgba(0, 0, 0, 0.19);
+    text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.4);
+    border: 1px solid #1f6db6;
+    color: #FFF !important;
+}
+.btl-panel select, .adminformlist select {
+    width: 137px !important;
+    cursor: pointer;
+}
+.btl-panel fieldset {padding: 0 !important;}
+#jform_params_wrapper_position0,  #jform_params_wrapper_position0, 
+#jform_params_underline0,  #jform_params_underline1, 
+#jform_params_hover_underline0,  #jform_params_hover_underline1 {
+    width: 16px;
+    height: 16px;
+}
+#separator {margin: 0 10px;}
+fieldset.panelform input {
+    font-size:  11px;
+    padding:  3px;
+    text-align:  center;
+    width: 80px !important;
+}
+section#wrapper {text-align: center;}
+ul#images {    
+    list-style: none outside none;
+    margin: 5px;
+    overflow: hidden;
+    display: inline-block;
+    padding: 5px;
+}
+ul#images li {
+    display: inline-block;
+    background: #fff;
+    margin: 4px 7px 4px 0;
+    padding: 0px;
+    position: relative;
+    overflow: hidden;
+    moz-box-shadow: 0 0 0 1px rgba(0, 0, 0, 0.1), 0 1px 2px 0 rgba(0, 0, 0, 0.2);
+    box-shadow: 0 0 0 1px rgba(0, 0, 0, 0.1), 0 1px 2px 0 rgba(0, 0, 0, 0.2), inset 0px 0px 5px #000;
+    border: 4px solid white;
+}
+ul#images li img {
+    margin: 0px;
+    width:  128px;
+}
+ul#images li.active {background: #4c96d8;}
+ul#images li span {font-weight: bold;}
+ul#images li a:hover {text-decoration: none;}
+div#file-area div.qq-upload-drop-area {margin-bottom: 0px;}
+
+div.qq-upload-drop-area p {
+    color: #3c3c3d;
+    text-transform: uppercase;
+    font: normal 400 14px 'Oswald',  Arial !important;
+    margin: 63px 0px 25px 0px;
+}
+div#file-area div.qq-upload-button {margin-bottom: 0px;}
+div.qq-upload-button p {
+    color: #3c3c3d;
+    text-transform: uppercase;
+    font: normal 400 14px 'Oswald',  Arial !important;
+    margin: 55px 0px 15px 0px;
+}
+ul#images li a.rem_item,
+ul#images li a.edit_item {
+    display: inline-block;
+    width: 29px;
+    height: 29px;
+    top: 35%;
+    cursor: pointer;
+    position: absolute;
+    transition: all 0.5s;
+    -webkit-transition: all 0.5s;
+    -moz-transition:  all 0.5s;
+}
+ul#images li a.rem_item {
+    background: url(../images/btn_delete.png) top left no-repeat;
+    left: -30%;
+}
+ul#images li a.edit_item {
+    background: url(../images/btn_edit.png) top left no-repeat;
+    right: -30%;
+}
+ul#images li:hover a.rem_item {left: 22%;}
+ul#images li:hover a.edit_item {right: 19%;}
+ul#images li:hover img {opacity: 0.5;}
+div.ui-dialog-buttonpane.ui-widget-content.ui-helper-clearfix {text-align: center;}
+div.ui-dialog-buttonpane.ui-widget-content.ui-helper-clearfix div.ui-dialog-buttonset {float: none;}
+
+div.ui-dialog-buttonpane.ui-widget-content.ui-helper-clearfix span.ui-button-text {
+    background: #00A5E4 !important;
+    text-transform: uppercase;
+    margin: 0px !important;
+    padding: 7px 40px !important;
+    background: -moz-linear-gradient(top,  #58A8F4 0%,  #348DDF 100%) !important;
+    border: 1px solid #1F6DB6 !important;
+    background: -webkit-gradient(linear,  left top,  left bottom,  color-stop(0%, #58A8F4),  color-stop(100%, #348DDF)) !important;
+    background: -o-linear-gradient(top,  #58A8F4,  #348DDF) !important;
+    background: linear-gradient(to bottom,  #58A8F4,  #348DDF) !important;
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#58A8F4',  endColorstr='#348DDF', GradientType=0 ) !important;
+    -webkit-box-shadow: 0 2px 1px rgba(0,  0,  0,  0.19),  0 2px 1px rgba(255,  255,  255,  0.2) inset !important;
+    -moz-box-shadow: 0 2px 1px rgba(0,  0,  0,  0.19),  0 2px 1px rgba(255,  255,  255,  0.2) inset !important;
+    box-shadow: 0 2px 1px rgba(0,  0,  0,  0.19),  0 2px 1px rgba(255,  255,  255,  0.2) inset !important;
+    text-shadow: 0 -1px 0 rgba(0,  0,  0,  0.4) !important;
+    position: relative;
+    color: #fff;
+    -moz-border-radius: 3px;
+    font: normal 400 14px 'Oswald',  Arial !important;
+    border-radius: 3px;
+    -webkit-border-radius: 3px;
+}
+div.ui-dialog-buttonpane.ui-widget-content.ui-helper-clearfix button, 
+div.ui-dialog-buttonpane.ui-widget-content.ui-helper-clearfix button.ui-state-hover {
+    border: none;
+}
+div.ui-dialog-buttonpane.ui-widget-content.ui-helper-clearfix button.ui-state-hover span {color: #333;}
+div#dialog-form fieldset, div.ui-dialog-buttonpane.ui-widget-content.ui-helper-clearfix {border: none;}
+div.ui-dialog-titlebar.ui-widget-header.ui-corner-all.ui-helper-clearfix span.ui-dialog-title {display: none;}
+
+div.ui-dialog-titlebar.ui-widget-header.ui-corner-all.ui-helper-clearfix {
+    background: none;
+    border: none;
+}
+div.ui-dialog.ui-widget.ui-widget-content.ui-corner-all.ui-front.ui-dialog-buttons.ui-draggable.ui-resizable {
+    border: 1px solid lightGrey;
+}
+div.ui-dialog-titlebar.ui-widget-header.ui-corner-all.ui-helper-clearfix button {
+    border-radius: 50%;
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    border: 0 solid white;
+    box-shadow: -1px 1px 4px #b9b9b9;
+    -webkit-box-shadow: -1px 1px 4px #b9b9b9;
+    -moz-box-shadow: -1px 1px 4px #b9b9b9;
+    top: -2%;
+    right: -2%;
+    z-index: 9999;
+    background: #333;
+}
+div.ui-dialog-titlebar.ui-widget-header.ui-corner-all.ui-helper-clearfix button span {
+    border-radius: 50%;
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    /*background: #333 url(../images/close.png) 45% 50% no-repeat;*/
+}
+div.ui-dialog-buttonpane.ui-widget-content.ui-helper-clearfix {
+    margin-top: 0px;
+    padding-top: 0px;
+}
+fieldset.panelform {
+    margin-bottom: 0px;
+    padding-bottom: 7px;
+}
+/*_______________________ tabs style for joomla > 3 __________________________*/
+ul#myTabTabs li a {
+    background: #FFF2F5;
+    background: -moz-linear-gradient(top, #F4F5F7 0%, #EAEBED 100%);
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#F4F5F7), color-stop(100%,#EAEBED));
+    background: -o-linear-gradient(top, #F4F5F7, #EAEBED);
+    background: linear-gradient(to bottom, #F4F5F7, #EAEBED);
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#F4F5F7', endColorstr='#EAEBED',GradientType=0 );
+-webkit-box-shadow: 0 2px 1px rgba(134, 134, 134, 0.12);
+   -moz-box-shadow: 0 2px 1px rgba(134, 134, 134, 0.12);
+    box-shadow: 0 2px 1px rgba(134, 134, 134, 0.12);
+    border: 1px solid #dedede;
+    color: #3c3c3d !important;
+    font-size: 11px;
+    text-transform: uppercase;
+}
+ul#myTabTabs li.active a {
+    background: #00A5E4;
+    background: -moz-linear-gradient(top, #58A8F4 0%, #348DDF 100%);
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#58A8F4), color-stop(100%,#348DDF));
+    background: -o-linear-gradient(top, #58A8F4, #348DDF);
+    background: linear-gradient(to bottom, #58A8F4, #348DDF);
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#58A8F4', endColorstr='#348DDF',GradientType=0 );
+-webkit-box-shadow: 0 2px 1px rgba(0, 0, 0, 0.19), 0 2px 1px rgba(255, 255, 255, 0.2) inset;
+   -moz-box-shadow: 0 2px 1px rgba(0, 0, 0, 0.19), 0 2px 1px rgba(255, 255, 255, 0.2) inset;
+    box-shadow: 0 2px 1px rgba(0, 0, 0, 0.19), 0 2px 1px rgba(255, 255, 255, 0.2) inset;
+    border: 1px solid #1f6db6;
+    color:#FFF !important;
+}
+#dialog-form input {
+    width: 97% !important;
+    margin: 0 0 8px 0 !important;
+    border-radius: 3px 3px 3px 3px;
+    color: #555555;
+    font-size: 13px;
+    height: 18px;
+    padding: 5px;
+}

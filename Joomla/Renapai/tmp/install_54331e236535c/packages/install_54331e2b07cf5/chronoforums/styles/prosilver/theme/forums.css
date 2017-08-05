@@ -1,0 +1,145 @@
+
+/*** bs fixes ***/
+.chronoforums .cfu-header .panel{margin-bottom:5px;}
+.chronoforums .cfu-header .panel .panel-body{padding:5px;}
+.chronoforums .cfu-footer .panel .panel-footer{padding:5px;}
+.chronoforums .cfu-header .cfu-search form{margin:0;}
+.chronoforums .cfu-footer .cfu-tasks form{margin:0;}
+.chronoforums .cfu-footer .panel {margin-bottom:5px;}
+.chronoforums .cfu-header .breadcrumb{margin-bottom:5px;}
+
+.chronoforums .cfu-editor .cfu-buttons{margin-bottom:5px; padding:3px;}
+.chronoforums .cfu-editor .cfu-smilies{margin-bottom:5px; padding:3px;}
+.chronoforums .cfu-editor .cfu-attachment{margin-top:5px;}
+.chronoforums .cfu-editor .cfu-attachment .form-group{margin-bottom:5px;}
+.chronoforums .cfu-editor .cfu-message {margin-top:5px;}
+.chronoforums .cfu-editor .cfu-upload {margin-top:5px;}
+.chronoforums .cfu-editor .cfu-submit {margin-top:5px;}
+.chronoforums .cfu-editor .cfu-preview .well {overflow:auto; white-space:normal; word-wrap:break-word;}
+
+.chronoforums ul.pagination li a{padding: 2px 7px;}
+.chronoforums .btn-sm{font-size:12px !important;}
+/*** new ***/
+.chronoforums.categories.index .cfu-lastpost .cfu-time{display:block;}
+.chronoforums.categories.index .cfu-category > .cfu-head h4{margin:0;}
+.chronoforums.categories.index .cfu-category .cfu-table {margin:0;}
+.chronoforums.categories.index .cfu-category .panel-body {padding:5px;}
+.chronoforums.categories.index .cfu-table .cfu-head .cfu-forum {width:45%;}
+
+.chronoforums.forums.index .cfu-lastpost .cfu-time{display:block;}
+.chronoforums.forums.index .cfu-lastpost {white-space:nowrap; width:22%;}
+.chronoforums.forums.index .cfu-author {white-space:nowrap; width:15%;}
+.chronoforums.forums.index .cfu-replies {white-space:nowrap; width:7%;}
+.chronoforums.forums.index .cfu-views {white-space:nowrap; width:7%;}
+.chronoforums.forums.index .cfu-topics .cfu-table {margin:0;}
+.chronoforums.forums.index .cfu-topics form {margin:0;}
+.chronoforums.forums.index .cfu-topic td {padding:4px;}
+.chronoforums.forums.index .cfu-topic .cfu-category-title {font-size:0.85em;}
+.chronoforums.forums.index .cfu-topic .cfu-forum-title {font-size:0.85em;}
+.chronoforums.forums.index .cfu-topic .cfu-title {font-weight:bold;}
+.chronoforums.forums.index .cfu-topic .cfu-title.cfu-read {font-weight:normal;}
+
+.chronoforums.forums.index .cfu-head .cfu-search form {margin:0;}
+.chronoforums.forums.index .cfu-head .panel{margin-bottom:5px;}
+.chronoforums.forums.index .cfu-head .panel-body {padding:5px;}
+.chronoforums.forums.index .cfu-foot .panel-body {padding:5px;}
+.chronoforums.forums.index .cfu-foot .cfu-tasks {padding:5px;}
+.chronoforums.forums.index .cfu-topics .panel {margin-bottom:5px;}
+.chronoforums.forums.index .cfu-topics .panel-body {padding:5px;}
+.chronoforums.forums.index .cfu-topics .cfu-table .cfu-topic {/*width:45%;*/}
+.chronoforums.forums.index .cfu-title h2 {margin:5px 0px;}
+
+.chronoforums.topics.add .cfu-fields {margin-top:5px;}
+.chronoforums.topics.add .cfu-subscribe {margin-top:5px;}
+.chronoforums.topics.delete_author .delete_button {margin-left:100px;}
+.chronoforums.posts.reply .cfu-fields {margin-top:5px;}
+
+.chronoforums.posts.index .cfu-topic .cfu-head .cfu-search form {margin:0;}
+.chronoforums.posts.index .cfu-topic .cfu-head {margin-bottom:5px;}
+.chronoforums.posts.index .cfu-topic .cfu-head .panel-body {padding:5px;}
+
+.chronoforums.posts.index .cfu-topic .cfu-foot .cfu-search form {margin:0;}
+.chronoforums.posts.index .cfu-topic .cfu-foot {margin-bottom:5px;}
+.chronoforums.posts.index .cfu-topic .cfu-foot .panel-body {padding:5px;}
+
+.chronoforums.posts.index .cfu-topic-status {padding:5px 15px;}
+
+.chronoforums.posts.index .cfu-post .cfu-attachment {padding:5px;}
+.chronoforums.posts.index .cfu-post .cfu-attachments {margin:0 0 5px 0;}
+.chronoforums.posts.index .cfu-post .cfu-file {margin:0;}
+.chronoforums.posts.index .cfu-tags {margin-bottom:3px;}
+.chronoforums.posts.index .cfu-tags .cfu-tag {margin:0px 1px;}
+.chronoforums.posts.index .cfu-signature {font-size:0.85em;}
+.chronoforums.posts .posts-loader-no-posts .alert {padding:5px;margin:0 0 5px 0;}
+.chronoforums.posts .posts-loader-no-posts .col-md-12 {padding:0px;}
+.chronoforums.posts .posts-loader-load-more {margin:0 0 5px 0;}
+.chronoforums.posts.index #quick_reply_preview {margin:5px 0 0px 0;padding:5px;}
+
+.chronoforums.messages .panel{margin-bottom:5px;}
+.chronoforums.messages .panel-body {padding:5px;}
+.chronoforums.messages .panel-body form {margin:0;}
+.chronoforums.messages .cfu-nav {padding:5px;}
+.chronoforums.messages.read .gcore-label-left {padding-top:0 !important;}
+
+.chronoforums.posts .cfu-topic .cfu-title h2 {margin:5px 0px; font-size:24px;}
+.chronoforums.posts.index .cfu-tags form {margin-bottom:0;}
+.chronoforums.posts.index .cfu-tags form .search-field input {height:auto;}
+.chronoforums.posts .cfu-post .panel {margin-bottom:5px;}
+.chronoforums.posts .cfu-post .panel-body {padding:5px;}
+.chronoforums.posts .cfu-post .panel-body .row {margin:0px;}
+.chronoforums.posts .cfu-post .panel-body .cfu-data {padding:4px;}
+.chronoforums.posts .cfu-post .cfu-profile .panel-heading {padding:3px 5px;}
+.chronoforums.posts .cfu-post .cfu-profile .panel-footer {padding:3px 5px;}
+.chronoforums.posts .cfu-post .cfu-profile {padding:0px;}
+/*.chronoforums.posts .cfu-post .cfu-profile .thumbnail {margin:0px;}
+.chronoforums.posts .cfu-post .cfu-profile .caption {padding:3px;}*/
+.chronoforums.posts .cfu-post .cfu-profile h5 {margin:4px 0px;}
+.chronoforums.posts .cfu-post .container {padding:0px 3px;}
+.chronoforums.posts .cfu-post .cfu-head {padding:5px;}
+.chronoforums.posts .cfu-post .cfu-head .cfu-title {font-size:15px; font-weight: bold; line-height: 25px;}
+.chronoforums.posts .cfu-post .cfu-head .cfu-user-info {padding-right:5px;}
+.chronoforums.posts .cfu-post hr {margin:3px 0px;}
+.chronoforums.posts .cfu-post .cfu-content {font-size:13px; white-space:normal; word-wrap:break-word;}
+.chronoforums.posts .cfu-post .cfu-content blockquote{background:none; width:auto;}
+.chronoforums.posts .cfu-post .cfu-content blockquote p{font-size:15.5px;}
+.chronoforums.posts .cfu-post .cfu-code, .chronoforums.messages .cfu-body .cfu-code{height:auto; margin:5px 0px; overflow: auto; min-height:25px;}
+.chronoforums.posts .cfu-code .cfu-multiline, .chronoforums.messages .cfu-code .cfu-multiline {
+	overflow: auto;
+	display: block;
+	height: auto;
+	white-space: normal;
+	padding-top: 5px;
+	font: 1em Consolas, Monaco, "Andale Mono","Courier New", Courier, mono;
+	line-height: 1.3em;
+	margin: 2px 0;
+	white-space:nowrap;
+	font-size:0.95em;
+}
+.chronoforums.posts .cfu-code.cfu-collapsed{max-height:250px;}
+.chronoforums.posts .cfu-multiline.cfu-collapsed{max-height:200px;}
+
+.cfu-profile-preview{
+	background-color:#a0b1c7 !important;
+	box-shadow:0 !important;
+	padding:3px !important;
+	/*width:300px !important;*/
+	font-size:13px !important;
+}
+.chronoforums.profiles.mini .cfu-avatar{margin-right:5px;}
+.chronoforums.profiles.mini .cfu-avatar{height:100px; width:100px;}
+.cfu-profile-preview .gtooltip-arrow {
+	border-color: #a0b1c7 transparent transparent transparent;
+}
+.cfu-profile .cfu-posts{text-align:left;}
+.cfu-profile .cfu-join{text-align:left;}
+.chronoforums .cfu-username{color:#000; font-weight:normal;}
+.chronoforums .cfu-quickreply .panel-body form{margin-bottom:0px;}
+.chronoforums .cfu-quickreply .panel-footer{padding:5px;}
+.chronoforums .cfu-quickreply .panel-heading{padding:5px;}
+.chronoforums .cfu-quickreply .panel-heading .panel-title{padding:7px;}
+.chronoforums.profiles .cfu-title{margin:0;}
+.chronoforums .cfu-favorited{color:#e9ab17;}
+.chronoforums .cfu-featured{color:#499989;}
+.chronoforums .cfu-mini-pager .btn{padding: 0px 5px;}
+#cfu-search-config-content{margin-top:7px;}
+#cfu-search-config-content .panel-heading{padding:5px;}

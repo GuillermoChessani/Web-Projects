@@ -1,0 +1,541 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension
+	type="module"
+	version="2.5"
+	client="site"
+	method="upgrade">
+	<name>ECO Skitter Slideshow Images for Phoca Gallery</name>
+	<author>Eco-Joom.com</author>
+	<creationDate>02/10/2013</creationDate>
+	<copyright>Copyright (C) 2011-2013 Ext-Joom.com and Eco-Joom.com. All Rights Reserved.</copyright>
+	<license>GNU General Public License version 2 or later; see LICENSE.txt</license>
+	<authorEmail>extjoom@gmail.com</authorEmail>
+	<authoralt>http://www.eco-joom.com/</authoralt>
+	<version>2.0</version>
+	<description>ECO Skitter Slideshow Images for Phoca Gallery (jQuery)</description>
+	<files>	
+		<filename module="mod_ext_skitter_slideshow_phoca_gallery">mod_ext_skitter_slideshow_phoca_gallery.php</filename>
+		<filename>index.html</filename>
+		<filename>mod_ext_skitter_slideshow_phoca_gallery.php</filename>
+		<filename>mod_ext_skitter_slideshow_phoca_gallery.xml</filename>
+		<folder>images</folder>
+		<folder>css</folder>
+		<folder>tmpl</folder>	
+		<folder>js</folder>     
+    </files>
+	
+	<languages>	
+		<language tag="en-GB">en-GB.mod_ext_skitter_slideshow_phoca_gallery.ini</language>
+		<language tag="en-GB">en-GB.mod_ext_skitter_slideshow_phoca_gallery.sys.ini</language>
+		<language tag="ru-RU">ru-RU.mod_ext_skitter_slideshow_phoca_gallery.ini</language>
+		<language tag="ru-RU">ru-RU.mod_ext_skitter_slideshow_phoca_gallery.sys.ini</language>		
+	</languages>
+		
+	<config>
+		<fields name="params">
+			<fieldset name="basic" >
+			
+				
+				<field 
+					name="ext_id" 
+					type="text" 
+					default="id1" 
+					label="MOD_EXT_SKITTER_SLIDESHOW_FIELD_EXT_ID_LABEL" 
+					description="MOD_EXT_SKITTER_SLIDESHOW_FIELD_EXT_ID_DESC"/>
+				
+				<field
+					name="ext_load_jquery"
+					type="radio"
+					default="1"
+					class="btn-group"
+					label="MOD_EXT_SKITTER_SLIDESHOW_FIELD_LOAD_JQ_LABEL"
+					description="MOD_EXT_SKITTER_SLIDESHOW_FIELD_LOAD_JQ_DESC" >
+						<option value="0">JNO</option>
+						<option value="1">JYES</option>
+				</field>
+				
+				<field
+					name="ext_jquery_ver"
+					type="text"
+					default="1.7.1"
+					label="MOD_EXT_SKITTER_SLIDESHOW_FIELD_JQUERYVER_LABEL"
+					description="MOD_EXT_SKITTER_SLIDESHOW_FIELD_JQUERYVER_DESC" />
+						
+						
+				<field
+					name="ext_load_easing"
+					type="radio"
+					default="1"
+					class="btn-group"
+					label="MOD_EXT_SKITTER_SLIDESHOW_FIELD_LOAD_EASING_LABEL"
+					description="MOD_EXT_SKITTER_SLIDESHOW_FIELD_LOAD_EASING_DESC" >
+						<option value="0">JNO</option>
+						<option value="1">JYES</option>
+				</field>
+				
+				
+				<field
+					name="easing"
+					type="list"
+					default="null"
+					label="MOD_EXT_SKITTER_SLIDESHOW_FIELD_EASING_LABEL"
+					description="MOD_EXT_SKITTER_SLIDESHOW_FIELD_EASING_DESC" >
+						<option value="null">null</option>					
+						<option value="easeInQuad">easeInQuad</option>
+						<option value="easeOutQuad">easeOutQuad</option>
+						<option value="easeInOutQuad">easeInOutQuad</option>
+						<option value="easeInCubic">easeInCubic</option>
+						<option value="easeOutCubic">easeOutCubic</option>
+						<option value="easeInOutCubic">easeInOutCubic</option>
+						<option value="easeInQuart">easeInQuart</option>
+						<option value="easeOutQuart">easeOutQuart</option>
+						<option value="easeInOutQuart">easeInOutQuart</option>
+						<option value="easeInQuint">easeInQuint</option>
+						<option value="easeOutQuint">easeOutQuint</option>
+						<option value="easeInOutQuint">easeInOutQuint</option>
+						<option value="easeInSine">easeInSine</option>
+						<option value="easeOutSine">easeOutSine</option>
+						<option value="easeInOutSine">easeInOutSine</option>
+						<option value="easeInExpo">easeInExpo</option>
+						<option value="easeOutExpo">easeOutExpo</option>
+						<option value="easeInOutExpo">easeInOutExpo</option>
+						<option value="easeInCirc">easeInCirc</option>
+						<option value="easeOutCirc">easeOutCirc</option>
+						<option value="easeInOutCirc">easeInOutCirc</option>
+						<option value="easeInElastic">easeInElastic</option>
+						<option value="easeOutElastic">easeOutElastic</option>
+						<option value="easeInOutElastic">easeInOutElastic</option>
+						<option value="easeInBack">easeInBack</option>
+						<option value="easeOutBack">easeOutBack</option>
+						<option value="easeInOutBack">easeInOutBack</option>
+						<option value="easeInBounce">easeInBounce</option>
+						<option value="easeOutBounce">easeOutBounce</option>
+						<option value="easeInOutBounce">easeInOutBounce</option>
+				</field>
+				
+				
+				
+				<field
+					name="ext_load_scripts"
+					type="radio"
+					default="1"
+					class="btn-group"
+					label="MOD_EXT_SKITTER_SLIDESHOW_FIELD_LOAD_SCRIPTS_LABEL"
+					description="MOD_EXT_SKITTER_SLIDESHOW_FIELD_LOAD_SCRIPTS_DESC" >
+						<option value="0">JNO</option>
+						<option value="1">JYES</option>
+				</field>
+				
+				
+				
+				<field
+					name="theme"
+					type="list"
+					default="square"
+					label="MOD_EXT_SKITTER_SLIDESHOW_FIELD_THEME_LABEL"
+					description="MOD_EXT_SKITTER_SLIDESHOW_FIELD_THEME_DESC">
+						<option	value="null">default</option>
+						<option	value="minimalist">minimalist</option>
+						<option	value="round">round</option>
+						<option	value="clean">clean</option>
+						<option	value="square">square</option>
+				</field>
+				
+				
+				<field
+					name="animations"
+					type="list"
+					default="randomSmart"
+					label="MOD_EXT_SKITTER_SLIDESHOW_FIELD_ANI_LABEL"
+					description="MOD_EXT_SKITTER_SLIDESHOW_FIELD_ANI_DESC">
+						<option	value="random">random</option>
+						<option	value="randomSmart">randomSmart</option>
+						<option	value="cube">cube</option>
+						<option	value="cubeRandom">cubeRandom</option>
+						<option	value="block">block</option>
+						<option	value="cubeStop">cubeStop</option>
+						<option	value="cubeHide">cubeHide</option>
+						<option	value="cubeSize">cubeSize</option>
+						<option	value="cubeShow">cubeShow</option>
+						<option	value="horizontal">horizontal</option>
+						<option	value="showBars">showBars</option>
+						<option	value="showBarsRandom">showBarsRandom</option>
+						<option	value="fade">fade</option>
+						<option	value="fadeFour">fadeFour</option>
+						<option	value="paralell">paralell</option>
+						<option	value="blind">blind</option>
+						<option	value="blindHeight">blindHeight</option>
+						<option	value="blindWidth">blindWidth</option>
+						<option	value="directionTop">directionTop</option>
+						<option	value="directionBottom">directionBottom</option>
+						<option	value="directionRight">directionRight</option>
+						<option	value="directionLeft">directionLeft</option>
+						<option	value="cubeStopRandom">cubeStopRandom</option>
+						<option	value="cubeSpread">cubeSpread</option>
+						<option	value="cubeJelly">cubeJelly</option>
+						<option	value="glassCube">glassCube</option>
+						<option	value="glassBlock">glassBlock</option>
+						<option	value="circles">circles</option>
+						<option	value="circlesInside">circlesInside</option>
+						<option	value="circlesRotate">circlesRotate</option>
+						<option	value="upBars">upBars</option>
+						<option	value="downBars">downBars</option>
+						<option	value="hideBars">hideBars</option>
+						<option	value="swapBars">swapBars</option>
+						<option	value="swapBarsBack">swapBarsBack</option>
+						<option	value="swapBlocks">swapBlocks</option>
+						<option	value="cut">cut</option>
+					</field>
+
+				
+				<field 
+					name="category_id"
+					type="text"
+					default="1"
+					label="MOD_EXT_SKITTER_SLIDESHOW_FIELD_CATEGORY_ID_LABEL"
+					description="MOD_EXT_SKITTER_SLIDESHOW_FIELD_CATEGORY_ID_DESC" />
+				<field 
+					name="count_images"
+					type="text"
+					default="5"
+					label="MOD_EXT_SKITTER_SLIDESHOW_FIELD_COUNT_IMAGES_LABEL"
+					description="MOD_EXT_SKITTER_SLIDESHOW_FIELD_COUNT_IMAGES_DESC" />	
+				
+				
+				<field 
+					name="width" 
+					type="text" 
+					default="960" 
+					label="MOD_EXT_SKITTER_SLIDESHOW_FIELD_WIDTH_LABEL" 
+					description="MOD_EXT_SKITTER_SLIDESHOW_FIELD_WIDTH_DESC"/>
+						
+				<field 
+					name="height" 
+					type="text" 
+					default="300" 
+					label="MOD_EXT_SKITTER_SLIDESHOW_FIELD_HEIGHT_LABEL" 
+					description="MOD_EXT_SKITTER_SLIDESHOW_FIELD_HEIGHT_DESC"/>
+					
+				
+				<field 
+					name="velocity"
+					type="text"
+					default="1"
+					label="MOD_EXT_SKITTER_SLIDESHOW_FIELD_VEL_LABEL"
+					description="MOD_EXT_SKITTER_SLIDESHOW_FIELD_VEL_DESC" />			
+				<field 
+					name="interval"
+					type="text"
+					default="3000"
+					label="MOD_EXT_SKITTER_SLIDESHOW_FIELD_INTERVAL_LABEL"
+					description="MOD_EXT_SKITTER_SLIDESHOW_FIELD_INTERVAL_DESC" />				
+				
+			
+				<field
+					name="label"
+					type="radio"
+					default="true"
+					class="btn-group"
+					label="MOD_EXT_SKITTER_SLIDESHOW_FIELD_LABEL_LABEL"
+					description="MOD_EXT_SKITTER_SLIDESHOW_FIELD_LABEL_DESC">
+						<option	value="true">JYES</option>
+						<option	value="false">JNO</option>
+				</field>
+				
+				<field
+					name="label_animation"
+					type="list"
+					default="left"
+					label="MOD_EXT_SKITTER_SLIDESHOW_FIELD_LABELANIMATION_LABEL"
+					description="MOD_EXT_SKITTER_SLIDESHOW_FIELD_LABELANIMATION_DESC">
+						<option	value="slideUp">slideUp</option>
+						<option	value="left">left</option>
+						<option	value="right">right</option>
+						<option	value="fixed">fixed</option>
+				</field>
+				
+				<field 
+					name="width_label"
+					type="text"
+					default="null"
+					label="MOD_EXT_SKITTER_SLIDESHOW_FIELD_WIDTH_LABEL_LABEL"
+					description="MOD_EXT_SKITTER_SLIDESHOW_FIELD_WIDTH_LABEL_DESC" />
+				
+				<field
+					name="auto_play"
+					type="radio"
+					default="true"
+					class="btn-group"
+					label="MOD_EXT_SKITTER_SLIDESHOW_FIELD_AUTO_PLAY_LABEL"
+					description="MOD_EXT_SKITTER_SLIDESHOW_FIELD_AUTO_PLAY_DESC">
+						<option	value="true">JYES</option>
+						<option	value="false">JNO</option>
+					</field>
+				
+				<field
+					name="focus"
+					type="radio"
+					default="false"
+					class="btn-group"
+					label="MOD_EXT_SKITTER_SLIDESHOW_FIELD_FOCUS_LABEL"
+					description="MOD_EXT_SKITTER_SLIDESHOW_FIELD_FOCUS_DESC">
+						<option	value="true">JYES</option>
+						<option	value="false">JNO</option>
+					</field>
+				
+				<field
+					name="focus_position"
+					type="list"
+					default="center"
+					label="MOD_EXT_SKITTER_SLIDESHOW_FIELD_FOCUS_POSITION_LABEL"
+					description="MOD_EXT_SKITTER_SLIDESHOW_FIELD_FOCUS_POSITION_DESC">
+						<option	value="center">center</option>
+						<option	value="leftTop">leftTop</option>
+						<option	value="rightTop">rightTop</option>
+						<option	value="leftBottom">leftBottom</option>
+						<option	value="rightBottom">rightBottom</option>
+					</field>
+				
+				
+				<field
+					name="hideTools"
+					type="radio"
+					default="false"
+					class="btn-group"
+					label="MOD_EXT_SKITTER_SLIDESHOW_FIELD_HIDETOOLS_LABEL"
+					description="MOD_EXT_SKITTER_SLIDESHOW_FIELD_HIDETOOLS_DESC">
+						<option	value="true">JYES</option>
+						<option	value="false">JNO</option>
+					</field>
+				
+				<field
+					name="controls"
+					type="radio"
+					default="false"
+					class="btn-group"
+					label="MOD_EXT_SKITTER_SLIDESHOW_FIELD_CONTROLS_LABEL"
+					description="MOD_EXT_SKITTER_SLIDESHOW_FIELD_CONTROLS_DESC">
+						<option	value="true">JYES</option>
+						<option	value="false">JNO</option>
+				</field>
+				
+				
+				<field
+					name="controls_position"
+					type="list"
+					default="center"
+					label="MOD_EXT_SKITTER_SLIDESHOW_FIELD_CONTROLS_POSITION_LABEL"
+					description="MOD_EXT_SKITTER_SLIDESHOW_FIELD_CONTROLS_POSITION_DESC">
+						<option	value="center">center</option>
+						<option	value="leftTop">leftTop</option>
+						<option	value="rightTop">rightTop</option>
+						<option	value="leftBottom">leftBottom</option>
+						<option	value="rightBottom">rightBottom</option>
+				</field>
+				
+				<field
+					name="progressbar"
+					type="radio"
+					default="false"
+					class="btn-group"
+					label="MOD_EXT_SKITTER_SLIDESHOW_FIELD_PROGRESSBAR_LABEL"
+					description="MOD_EXT_SKITTER_SLIDESHOW_FIELD_PROGRESSBAR_DESC">
+						<option	value="true">JYES</option>
+						<option	value="false">JNO</option>
+					</field>
+				
+				<field
+					name="enable_navigation_keys"
+					type="radio"
+					default="false"
+					class="btn-group"
+					label="MOD_EXT_SKITTER_SLIDESHOW_FIELD_ENABLE_NAVIGATION_KEYS_LABEL"
+					description="MOD_EXT_SKITTER_SLIDESHOW_FIELD_ENABLE_NAVIGATION_KEYS_DESC">
+						<option	value="true">JYES</option>
+						<option	value="false">JNO</option>
+					</field>
+				
+				<field
+					name="fullscreen"
+					type="radio"
+					default="false"
+					class="btn-group"
+					label="MOD_EXT_SKITTER_SLIDESHOW_FIELD_FULLSCREEN_LABEL"
+					description="MOD_EXT_SKITTER_SLIDESHOW_FIELD_FULLSCREEN_DESC">
+						<option	value="true">JYES</option>
+						<option	value="false">JNO</option>
+				</field>			
+				<field
+					name="show_randomly"
+					type="radio"
+					default="false"
+					class="btn-group"
+					label="MOD_EXT_SKITTER_SLIDESHOW_FIELD_SHOW_RANDOMLY_LABEL"
+					description="MOD_EXT_SKITTER_SLIDESHOW_FIELD_SHOW_RANDOMLY_DESC">
+						<option	value="true">JYES</option>
+						<option	value="false">JNO</option>
+					</field>
+				<field
+					name="navigation"
+					type="radio"
+					default="true"
+					class="btn-group"
+					label="MOD_EXT_SKITTER_SLIDESHOW_FIELD_NAVIGATION_LABEL"
+					description="MOD_EXT_SKITTER_SLIDESHOW_FIELD_NAVIGATION_DESC">
+						<option	value="true">JYES</option>
+						<option	value="false">JNO</option>
+				</field>
+				
+				<field
+					name="navigation_button"
+					type="list"
+					default="none"
+					label="MOD_EXT_SKITTER_SLIDESHOW_FIELD_NAVIGATION_BUTTON_LABEL"
+					description="MOD_EXT_SKITTER_SLIDESHOW_FIELD_NAVIGATION_BUTTON_DESC">
+						<option	value="none">none</option>
+						<option	value="numbers">numbers</option>
+						<option	value="thumbs">thumbs</option>
+						<option	value="dots">dots</option>			
+				</field>
+				
+				<!-- <field
+					name="navigation"
+					type="list"
+					default="numbers"
+					label="MOD_EXT_SKITTER_SLIDESHOW_FIELD_NAVIGATION_LABEL"
+					description="MOD_EXT_SKITTER_SLIDESHOW_FIELD_NAVIGATION_DESC">
+						<option	value="none">none</option>
+						<option	value="numbers">numbers</option>
+						<option	value="thumbs">thumbs</option>
+						<option	value="dots">dots</option>			
+				</field>	 -->
+
+				
+				<field
+					name="numbers_align"
+					type="list"
+					default="left"
+					label="MOD_EXT_SKITTER_SLIDESHOW_FIELD_NUMBERS_ALIGN_LABEL"
+					description="MOD_EXT_SKITTER_SLIDESHOW_FIELD_NUMBERS_ALIGN_DESC">
+						<option	value="left">left</option>
+						<option	value="center">center</option>
+						<option	value="right">right</option>
+					</field>
+				<!-- 
+				<field name="pos" type="list" default="0"
+					label="MOD_EXT_SKITTER_SLIDESHOW_FIELD_POS_LABEL"
+					description="MOD_EXT_SKITTER_SLIDESHOW_FIELD_POS_DESC"
+					filter="int">
+						<option value="0">top</option>
+						<option value="1">bottom</option>
+					</field>
+				<field 
+					name="ots"
+					type="text"
+					default="15"
+					label="MOD_EXT_SKITTER_SLIDESHOW_FIELD_OTS_LABEL"
+					description="MOD_EXT_SKITTER_SLIDESHOW_FIELD_OTS_DESC" /> -->
+				
+		
+				<field name="spacer1" type="spacer" class="text" label="MOD_EXT_SKITTER_SLIDESHOW_FIELD_ANIMATENUMBEROUT_DESC"/>	
+				<field 
+					name="color_Out"
+					type="color"
+					default="#FFFFFF"
+					label="MOD_EXT_SKITTER_SLIDESHOW_FIELD_COLOR_LABEL"
+					description="MOD_EXT_SKITTER_SLIDESHOW_FIELD_COLOR_DESC" />
+				<field 
+					name="background_Out"
+					type="color"
+					default="#333333"
+					label="MOD_EXT_SKITTER_SLIDESHOW_FIELD_BACKGROUND_LABEL"
+					description="MOD_EXT_SKITTER_SLIDESHOW_FIELD_BACKGROUND_DESC" />
+				
+				
+				
+				<field name="spacer2" type="spacer" class="text" label="MOD_EXT_SKITTER_SLIDESHOW_FIELD_ANIMATENUMBEROVER_DESC"/>		
+				
+				<field 
+					name="color_Over"
+					type="color"
+					default="#FFFFFF"
+					label="MOD_EXT_SKITTER_SLIDESHOW_FIELD_COLOR_LABEL"
+					description="MOD_EXT_SKITTER_SLIDESHOW_FIELD_COLOR_DESC" />
+				<field 
+					name="background_Over"
+					type="color"
+					default="#000000"
+					label="MOD_EXT_SKITTER_SLIDESHOW_FIELD_BACKGROUND_LABEL"
+					description="MOD_EXT_SKITTER_SLIDESHOW_FIELD_BACKGROUND_DESC" />
+					
+				<field name="spacer3" type="spacer" class="text" label="MOD_EXT_SKITTER_SLIDESHOW_FIELD_ANIMATENUMBERACTIVE_DESC"/>
+				
+				<field 
+					name="color_Active"
+					type="color"
+					default="#FFFFFF"
+					label="MOD_EXT_SKITTER_SLIDESHOW_FIELD_COLOR_LABEL"
+					description="MOD_EXT_SKITTER_SLIDESHOW_FIELD_COLOR_DESC" />
+				<field 
+					name="background_Active"
+					type="color"
+					default="#CC3333"
+					label="MOD_EXT_SKITTER_SLIDESHOW_FIELD_BACKGROUND_LABEL"
+					description="MOD_EXT_SKITTER_SLIDESHOW_FIELD_BACKGROUND_DESC" />
+					
+				<field name="spacer4" type="spacer" class="text" label="MOD_EXT_SKITTER_SLIDESHOW_FIELD_BACKGROUND_PROGRESSBAR_SPACER_DESC"/>
+				
+				<field 
+					name="background_progressbar"
+					type="color"
+					default="#000000"
+					label="MOD_EXT_SKITTER_SLIDESHOW_FIELD_BACKGROUND_PROGRESSBAR_LABEL"
+					description="MOD_EXT_SKITTER_SLIDESHOW_FIELD_BACKGROUND_PROGRESSBAR_DESC" />
+				
+			</fieldset>
+			
+			
+			<fieldset
+				name="advanced">
+				<field
+					name="layout"
+					type="modulelayout"
+					label="JFIELD_ALT_LAYOUT_LABEL"
+					description="JFIELD_ALT_MODULE_LAYOUT_DESC" />
+					
+				<field
+					name="moduleclass_sfx"
+					type="text"
+					label="COM_MODULES_FIELD_MODULECLASS_SFX_LABEL"
+					description="COM_MODULES_FIELD_MODULECLASS_SFX_DESC" />
+
+				<field
+					name="cache"
+					type="list"
+					default="1"
+					class="btn-group"
+					label="COM_MODULES_FIELD_CACHING_LABEL"
+					description="COM_MODULES_FIELD_CACHING_DESC">
+					<option
+						value="1">JGLOBAL_USE_GLOBAL</option>
+					<option
+						value="0">COM_MODULES_FIELD_VALUE_NOCACHING</option>
+				</field>
+
+				<field
+					name="cache_time"
+					type="text"
+					default="900"
+					label="COM_MODULES_FIELD_CACHE_TIME_LABEL"
+					description="COM_MODULES_FIELD_CACHE_TIME_DESC" />
+				<field
+					name="cachemode"
+					type="hidden"
+					default="static">
+					<option
+						value="static"></option>
+				</field>
+			</fieldset>
+		</fields>
+	</config>
+</extension>

@@ -1,0 +1,326 @@
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en   ">
+
+  <head>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+	<meta http-equiv="Cache-Control" content="no-cache" />
+	<meta http-equiv="Pragma" content="no-cache" />
+	<meta http-equiv="Expires" content="-1" />
+	<meta http-equiv="Cache-Control" content="max-age=0" />
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-544070-8', 'joomla.org');
+  ga('send', 'pageview');
+
+</script>
+		
+	<title>JoomlaCode > File Download Error</title>
+	<link rel="shortcut icon" href="/themes/gforge5/favicon.ico" />
+
+<script type="text/javascript" src="http://partner.googleadservices.com/gampad/google_service.js">
+</script>
+<script type="text/javascript">
+ GS_googleAddAdSenseService("ca-pub-1189370408998555");
+ GS_googleEnableAllServices();
+</script>
+<script type="text/javascript">
+ GA_googleAddSlot("ca-pub-1189370408998555", "Joomla_Joomlacode");
+ GA_googleAddSlot("ca-pub-1189370408998555", "Joomla_JoomlacodeSide");
+ GA_googleAddSlot("ca-pub-1189370408998555", "Joomla_JoomlacodeFooter");
+</script>
+<script type="text/javascript">
+ GA_googleFetchAds();
+</script>
+		<link href="/combine.php?type=css&files=/themes/joomla/GFTheme.css,/themes/joomla/jquery-ui-theme/jquery-ui.css,/themes/joomla/viewvc.css,/themes/joomla/textwiki.css,/themes/joomla/dialog.css,/themes/joomla/jquery.meow.css,/themes/joomla/ddsmoothmenu.css,/themes/joomla/ddsmoothmenu-v.css" rel="stylesheet" type="text/css" />
+		<script type="text/javascript" src="/combine.php?type=javascript&files=/json2.js,/js/gf-common.js,/js/tooltip.js,/tabber.js,/mktree.js,/dialog.js,/jquery.js,/jquery-ui.js,/ddsmoothmenu.js,/ddaccordion.js,/jquery.meow.js,/jcfbtooltip.js,/jquery.tmpl.min.js,/js/gforge5.js,/html5.uploader.main.js,/jquery.checkboxtree.js,/jquery.slidePanel.min.js,/spin.js,/jquery.tablesorter.js,/jquery.history.js"></script>
+
+<script type="text/javascript">
+ddaccordion.init({
+	headerclass: "expandable", //Shared CSS class name of headers group
+	contentclass: "submenu", //Shared CSS class name of contents group
+	collapseprev: true, //Collapse previous content (so only one open at any time)? true/false 
+	defaultexpanded: [], //index of content(s) open by default [index1, index2, etc] [] denotes no content
+	animatedefault: false, //Should contents open by default be animated into view?
+	persiststate: false, //persist state of opened contents within browser session?
+	toggleclass: ["", "openheader"], //Two CSS classes to be applied to the header when it's collapsed and expanded, respectively ["class1", "class2"]
+	togglehtml: ["suffix", "", ""], //Additional HTML added to the header when it's collapsed and expanded, respectively  ["position", "html1", "html2"] (see docs)
+	animatespeed: "normal" //speed of animation: "fast", "normal", or "slow"
+})
+
+oldload = window.onload;
+function expandableExpandItem(){};
+function docmanExpandTree(){};
+window.onload=function() {
+		if (typeof customonload == 'function') {
+			customonload();
+		}	
+		oldload();convertTrees();window.setTimeout('expandableExpandItem()',100);docmanExpandTree();
+	BrowserDetect.init();
+}
+
+// Localized JS messages
+window.locale = {
+    "fileupload": {
+        "errors": {
+            "maxFileSize": "File is too big.  Maximum allowed size: 262144000 bytes",
+            "minFileSize": "File is too small",
+            "acceptFileTypes": "File type not allowed",
+            "maxNumberOfFiles": "Max number of files exceeded",
+            "uploadedBytes": "Uploaded bytes exceed file size",
+            "emptyResult": "Empty file upload result. Make sure you don't exceed the maximum allowed size: 262144000 bytes"
+        },
+        "error": "Error",
+        "start": "Start",
+        "cancel": "Delete",
+        "destroy": "Empty",
+        "empty": "Empty",
+        "uploadHint": "Hint: Drag files from your computer into this page to attach them.",
+        "uploadHint2": "Hint: This browser does not support drag and drop uploads. To attach files, please use the Attach files button",
+        "attachedFilesTitle": "Attached files",
+        "attachFiles": "Attach files...",
+        "noFiles": "No attached files"
+    }
+};
+
+_ENABLE_UPLOADS = false;
+</script>
+
+</head>
+
+<body class='noleftbody' data-spy="scroll" data-target="#navbar">
+<div class="topheader">
+    <ul class="topmenu">
+      <li class="item122"><a href="http://www.joomla.org/"><span>Home</span></a></li><div class="sep">|</div>
+      <li class="item153"><a href="http://www.joomla.org/about-joomla.html"><span>About Joomla</span></a></li><div class="sep">|</div>
+      <li class="item123"><a href="http://community.joomla.org"><span>Community</span></a></li><div class="sep">|</div>
+      <li class="item124"><a href="http://forum.joomla.org"><span>Forum</span></a></li><div class="sep">|</div>
+      <li class="item125"><a href="http://extensions.joomla.org"><span>Extensions</span></a></li><div class="sep">|</div>
+      <li class="item126"><a href="http://docs.joomla.org"><span>Documentation</span></a></li><div class="sep">|</div>
+      <li class="item127"><a href="http://developer.joomla.org"><span>Developer</span></a></li><div class="sep">|</div>
+      <li class="item149"><a href="http://shop.joomla.org"><span>Shop</span></a></li>
+    </ul>
+    <div class="toplogo">
+      <a href="http://www.joomla.org/"><img src="/themes/joomla/images/joomla_logo.png" alt="Joomla!"></a> <!-- end logo -->
+</div><!-- end header -->
+  </div>
+<script>
+	function getPos(obj, direction) {	/*		direction == 0 ---> Top		direction != 0 ---> Left	*/
+		var cur = 0;
+		if (obj.offsetParent) {
+			do {
+				if (direction == 0)
+					cur += obj.offsetTop;
+				else
+					cur += obj.offsetLeft;
+			} while (obj = obj.offsetParent);
+		}
+		return cur;
+	}
+	function expandFloatingMenu(id, icon) {
+		var menu = document.getElementById(id);
+		var icon = document.getElementById(icon);		
+		var t = getPos(icon, 0);
+		var l = getPos(icon, 1);
+		menu.style.top = ((t + parseInt(icon.height)) + "px");
+		menu.style.left = (l + "px");
+		if (menu.style.visibility == "visible")
+			menu.style.visibility = "hidden";
+		else
+			menu.style.visibility = "visible";
+	}
+	
+</script>
+
+
+
+<div id="header" style="min-width:803px;">
+
+<script type="text/javascript">
+		</script>
+
+<script>
+	$(document).ready(function(){
+	 	$("#notificationssummary").jcfbtooltip({position:'bottom', 'width':'350px' ,method: getPastNotifications});
+		$("#quickjumpmenupopup").jcfbtooltip({position:'bottom', 'width': '180px'});
+		$("#searchmenuicon").jcfbtooltip({position:'bottom', 'width': '250px'});
+
+		$( "#notificationsTemplate" ).template( "notificationtemplate" );
+		$( "#nonotificationsTemplate" ).template( "nonotificationtemplate" );
+		$( "#notificationsAreaTemplate" ).template( "tooltiptemplate" );
+		$( "#quickJumpMenuTemplate" ).template( "jumpmenutemplate" );
+		$( "#searchMenuTemplate" ).template( "searchmenutemplate" );
+
+		var data = {};
+		$.tmpl( "tooltiptemplate", data ).appendTo( $('#jcapp-notificationssummary') );
+		$.tmpl( "jumpmenutemplate", data ).appendTo( $('#jcapp-quickjumpmenupopup') );
+		$.tmpl( "searchmenutemplate", data ).appendTo( $('#jcapp-searchmenuicon') );
+		
+
+		$(document).on('click', '.sound-toggle', function(e) {
+			submitSystemSoundSetting(this);	
+			return false;
+		});
+
+		$(document).on('click', '.my-message-wall"', function(e) {
+			window.location = '/gf/my/messagewall';
+			return false;
+		});
+
+		$(':not(#jcapp-notificationssummary)').click(function(ev) {
+			var str_class = '';
+			if ($(this).attr("class")) {
+				str_class = $(this).attr("class");
+			}
+
+			if ($(this).parents('#jcapp-notificationssummary').length == 0 && str_class.indexOf("notifications") == -1 && str_class.indexOf('sound-toggle') == -1) {
+		    $('#jcapp-notificationssummary').hide();
+		    $('#jcapp-notificationssummary').attr('visibility-status', 'hidden');
+			}
+
+			if ($(this).parents('#jcapp-notificationssummary').length > 0) {
+				ev.stopPropagation();
+				if (str_class.indexOf('sound-toggle') != -1) {
+					submitSystemSoundSetting(this);
+				}
+			}
+		});
+	
+	
+		$(':not(#jcapp-quickjumpmenupopup)').click(function(ev) {
+			var str_class = '';
+			if ($(this).attr("class")) {
+				str_class = $(this).attr("class");
+			}
+
+			if ($(this).parents('#jcapp-notificationssummary').length == 0 && str_class.indexOf("quickjumpmenuicon") == -1) {
+		    $('#jcapp-quickjumpmenupopup').hide();
+		    $('#jcapp-quickjumpmenupopup').attr('visibility-status', 'hidden');
+			}
+
+			if ($(this).parents('#jcapp-notificationssummary').length > 0) {
+				ev.stopPropagation();
+			}
+
+		});
+
+
+		$(':not(#jcapp-searchmenuicon)').click(function(ev) {
+			var str_class = '';
+			if ($(this).attr("class")) {
+				str_class = $(this).attr("class");
+			}
+
+			if ($(this).parents('#jcapp-searchmenuicon').length == 0 && $(this).parents('.tooltip-content').length == 0 && str_class.indexOf("SearchByIDMenu") == -1) {
+		    $('#jcapp-searchmenuicon').hide();
+		    $('#jcapp-searchmenuicon').attr('visibility-status', 'hidden');
+			}
+			
+			if ($(this).parents('#jcapp-searchmenuicon').length > 0) {
+				ev.stopPropagation();
+			}
+
+		});
+	
+		
+	});  
+</script>
+
+	
+
+	<h1 id="logo"><a href="/">MyGforge Home</a></h1>
+	<ul id="mainNav"><li class="start"></li>
+				<li><a  href="/gf/">Home</a></li>
+				<li><a  href="/gf/my/">My Stuff</a></li>
+				<li><a  href="/gf/user/">Users</a></li>
+				<li><a  href="/gf/search/">Search</a></li>
+				<li><a  href="/gf/project/">Projects</a></li>
+				<li class="end"><a  href="/gf/snippet/">Snippets</a></li>
+	</ul>
+<div id="quickjumpmenuarea" style="display: none;">
+</div>
+
+
+<script id="quickJumpMenuTemplate" type="text/x-jquery-tmpl">
+
+	<div class="tooltip-title">
+		Quick Jump	</div>
+	
+	<div class="tooltip-settings">
+	</div>
+
+	<div class="tooltip-content">
+			</div>
+
+</script>
+
+
+<script id="searchMenuTemplate" type="text/x-jquery-tmpl">
+
+	<div class="tooltip-title">
+		Search By Id	</div>
+	
+	<div class="tooltip-settings">
+	</div>
+
+	<div class="tooltip-content">
+			<form id="searchbyid" name="searchbyid" class="SearchByIDMenu" action="/gf/search/?action=SearchById" method="POST">
+			<table class="SearchByIDMenu" summary="" style="width: 100%">
+				<tr>
+					<td class="SearchByIDMenu">
+						<select name="searchtype" class="SearchByIDMenu">
+							<option value="forummessage">Forum Message</option><option value="trackeritem" selected>Tracker Item</option><option value="frsrelease">FRS Release</option>						</select>
+					</td>
+					<td class="SearchByIDMenu">
+						<strong>Item Id:&nbsp;</strong><input type="text" size="4" name="searchid" id="quicksearchid" value="" />
+					</td>
+				</tr>
+				<tr style="text-align: center;">
+					<td colspan="2">
+						<div class="buttondiv"><div class="button"><a href="javascript:;" style="color: #FFFFFF;" onclick="document.getElementById('searchbyidsubmit').click();">Search</a><span></span></div><span style="display:none;"><input type="submit" id="searchbyidsubmit" name="searchbyidsubmit" onclick="" /></span></div>					</td>
+				</tr>
+			</table>
+			</form>
+	</div>
+
+</script>
+
+<img title="Search by ID" alt="Search by ID" class="SearchByIDMenu" id="searchmenuicon" src="/themes/joomla/images/blue/searchbyid_off.gif" style="float:left; position:relative; top:0px;" onmouseover="this.src='/themes/joomla/images/blue/searchbyid_on.gif';" onmouseout="this.src='/themes/joomla/images/blue/searchbyid_off.gif';" onclick="$('#jcapp-searchmenuicon').toggle(); $('#quicksearchid').focus(); window.scrollTo(0, 0);" /><a href="http://gforgegroup.com/es/help.php?section=" target="_blank" style='float:left; position:relative; top:0px;'><img title='Help' alt='Help' class='HelpMenu' id='helpIcon' src='/themes/joomla/images/blue/help_off.gif' style='float:left; position:relative; top:0px;' onmouseover='this.src="/themes/joomla/images/blue/help_on.gif";' onmouseout='this.src="/themes/joomla/images/blue/help_off.gif";'/></a>
+
+		<div id="login" nowrap="nowrap"><a href="/gf/account/?action=Login&amp;redirect=%2Fgf%2Fdownload%2Ffrsrelease%2F19688%2F160115%2Fpkg_kunena_v3.0.6_2013-05-15.zip">Log in</a> | <a href="/gf/account/?action=UserAdd">Register new account</a>		</div>
+		
+		<div class="clear"></div>		
+</div>
+<div id="container">
+	<div id="rightnoleft">
+	
+		<div class="contentNav">
+			<p id="crumbs"><a href="/">Home</a> » File Download Error</p>
+			<div class="clear"></div>
+		</div>
+		<div class="main">
+			<span class="feedback">Invalid parameters supplied</span><br />  <div style="padding-top: 20px; margin: 0 auto; text-align:center;">	
+    <script type="text/javascript">
+    GA_googleFillSlot("Joomla_JoomlacodeFooter");
+    </script>
+    </div>
+    <br /><br />
+    <div id="site-footerInfo">&copy;2005-2013 <a href="http://www.opensourcematters.org">Open Source Matters, Inc.</a> All rights reserved. <a href="http://www.rochenhost.com" target="_blank">Joomla Hosting</a> by Rochen Ltd.&nbsp;&nbsp;&nbsp;
+
+          <a href="http://www.joomla.org/accessibility-statement.html">Accessibility Statement</a>&nbsp;&nbsp;&nbsp;
+          <a href="http://www.joomla.org/privacy-policy.html">Privacy Policy</a>&nbsp;&nbsp;&nbsp;
+          <a href="http://gforgegroup.com/">Gforge</a>
+        <!-- end #site-footerInfo --></div>
+
+    </div>
+    <div class="clear"></div>		<div class="clear"></div>
+  </div>
+
+
+</body>
+</html>

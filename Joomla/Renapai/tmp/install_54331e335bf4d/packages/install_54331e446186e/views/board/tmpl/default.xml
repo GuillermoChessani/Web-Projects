@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<metadata>
+	<layout title="Board Home Page" option="Display Categories and forums list">
+		<help key = "Board Home Page" />
+		<message>
+			Board Home Page
+		</message>
+	</layout>
+</metadata>

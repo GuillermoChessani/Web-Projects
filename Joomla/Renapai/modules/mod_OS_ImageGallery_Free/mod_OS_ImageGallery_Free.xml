@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension type="module" version="2.5.0">
+    <name>OS ImageGallery Free</name>
+    <author>OrdaSoft</author>
+    <creationDate>Nov 2013</creationDate>
+    <copyright>OrdaSoft 2013</copyright>
+    <license>http://www.gnu.org/licenses/gpl-2.0.html GNU/GPL</license>
+    <authorEmail>akbet@mail.ru</authorEmail>
+    <authorUrl>http://ordasoft.com</authorUrl>
+    <version>1.0.0</version>
+    <description><![CDATA[<img src="../modules/mod_OS_ImageGallery_Free/images/os_gallery_installation_image.png">]]></description>
+    <scriptfile>script.php</scriptfile>
+    <files>
+        <filename module="mod_OS_ImageGallery_Free">mod_OS_ImageGallery_Free.php</filename>
+        <folder>assets</folder>
+        <folder>fields</folder>
+        <folder>helpers</folder>
+        <folder>images</folder>
+        <folder>tmpl</folder>
+        <folder>file_uploader</folder>
+        <filename>index.html</filename>
+        <filename>script.php</filename>
+    </files>
+    <config>
+        <fields name="params" addfieldpath="/modules/mod_OS_ImageGallery_Free/fields">
+            <fieldset name="images-manager" label="Images">
+                <field name="imagezer" type="imagezer" default="" label="File uploaders and sort" description="File uploaders and sort" />
+            </fieldset>
+
+            <fieldset name="gallery_options" label="Gellery options">
+                <field name="width" type="text" class="number slideoptions" size="15" default="350" label="Thumbnail Width" description="Thumbnail images width in pixels." />
+                <field name="height" type="text" class="number slideoptions" size="15" default="240" label="Thumbnail Height" description="Thumbnail images height in pixels." />
+                <field name="img_in_row" type="text" class="number slideoptions" size="15" default="3" label="Images in row" description="Quantity images in row. max-images in row 9." />
+            </fieldset>
+
+            <fieldset name="advanced" label="Advanced options">
+                <field name="jquery-local" type="radio" class="btn-group" default="0" label="jQuery local" description="jQuery local">
+                    <option value="1">On</option>
+                    <option value="0">Off</option>
+                </field>
+                <field name="jquery" type="radio" class="btn-group" default="0" label="jQuery" description="jQuery">
+                    <option value="1">On</option>
+                    <option value="0">Off</option>
+                </field>
+                <field name="no-conflict" type="radio" class="btn-group" default="0" label="jQuery.noConflict" description="jQuery.noConflict">
+                    <option value="1">On</option>
+                    <option value="0">Off</option>
+                </field>
+                <field name="sufix" type="text" size="9" default="ordasoft" label="Module class sufix" description="Module class sufix" />
+            </fieldset>
+
+        </fields>
+    </config>
+</extension>

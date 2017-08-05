@@ -1,0 +1,319 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension
+	type="module"
+	version="1.6.0"
+	client="site"
+	method="upgrade">
+	<name>J Photostack</name>
+	<author>Md. Shaon Bahadur</author>
+	<creationDate>25th October 2011</creationDate>
+	<copyright>Copyright (C) 2011 j-download.com, All rights reserved.</copyright>
+	<license>http://www.gnu.org/licenses/gpl-2.0.html GNU/GPL</license>
+	<authorEmail>info@j-download.com</authorEmail>
+	<authorUrl>www.j-download.com</authorUrl>
+	<version>1.0.0</version>
+	<description>
+        <![CDATA[
+            <table width="80%" cellpadding="0" cellspacing="0" border="0" align="center"><tr><td>
+              <table width="100%" cellpadding="5" cellspacing="5" border="0"><tr><td valign="top"><img src="../modules/mod_jphotostack/tmpl/images/jphotostack.png" border="0" /></td>
+              <td valign="top" style="padding-left:60px;">
+                <p>J Photostack Show images as gallery from different folder. Folders are pretty much static and which are located under modules mod_jphotostack/tmpl/albums . Up to ten folder can be added for image show. In each folder there is thumb folder to view thumb image in category view. From module parameter there is option to configure each of ten entries. Module parameters are given below:</p>
+                <p>
+                    <ul>
+                        <li>Name [1]:</li>
+                        <li>Description [1]:</li>
+                        <li>Thum [1]:</li>
+                    </ul>
+                </p>
+              </td></tr></table>
+            </td></tr>
+            </table>
+            ]]>
+    </description>
+	<files>
+		<filename module="mod_jphotostack">mod_jphotostack.php</filename>
+		<folder>tmpl</folder>
+		<filename>index.html</filename>
+        <filename>mod_jphotostack.xml</filename>
+	</files>
+	<help key="JHELP_EXTENSIONS_MODULE_MANAGER_LOGIN" />
+	<config>
+		<fields name="params">
+			<fieldset name="basic">
+				<field
+					name="name1"
+					type="text"
+                    default="Image One"
+                    size="88"
+					filter="safehtml"
+					label="Name [1]:"
+					description="Please Enter Category Name" />
+				<field
+					name="description1"
+					type="textarea"
+                    default="Image one goes here. Image one goes here. Image one goes here. Image one goes here. Image one goes here. Image one goes here. Image one goes here."
+                    cols="50"
+                    rows="5"
+					filter="safehtml"
+					label="Description [1]:"
+					description="Please Enter Category Description" />
+				<field
+					name="thum1"
+					type="text"
+                    default="modules/mod_jphotostack/tmpl/albums/album1/thumb/thumb.jpg"
+                    size="88"
+					filter="safehtml"
+					label="Thum [1]:"
+					description="Please Enter Category Thum Image" />
+				<field
+					name="name2"
+					type="text"
+                    default="Image Two"
+                    size="88"
+					filter="safehtml"
+					label="Name [2]:"
+					description="Please Enter Category Name" />
+				<field
+					name="description2"
+					type="textarea"
+                    default="Image two goes here. Image two goes here. Image two goes here. Image two goes here. Image two goes here. Image two goes here. Image two goes here."
+                    cols="50"
+                    rows="5"
+					filter="safehtml"
+					label="Description [2]:"
+					description="Please Enter Category Description" />
+				<field
+					name="thum2"
+					type="text"
+                    default="modules/mod_jphotostack/tmpl/albums/album2/thumb/thumb.jpg"
+                    size="88"
+					filter="safehtml"
+					label="Thum [2]:"
+					description="Please Enter Category Thum Image" />
+				<field
+					name="name3"
+					type="text"
+                    default="Image Three"
+                    size="88"
+					filter="safehtml"
+					label="Name [3]:"
+					description="Please Enter Category Name" />
+				<field
+					name="description3"
+					type="textarea"
+                    default="Image three goes here. Image three goes here. Image three goes here. Image three goes here. Image three goes here. Image three goes here.Image three goes here."
+                    cols="50"
+                    rows="5"
+					filter="safehtml"
+					label="Description [3]:"
+					description="Please Enter Category Description" />
+				<field
+					name="thum3"
+					type="text"
+                    default="modules/mod_jphotostack/tmpl/albums/album3/thumb/thumb.jpg"
+                    size="88"
+					filter="safehtml"
+					label="Thum [3]:"
+					description="Please Enter Category Thum Image" />
+				<field
+					name="name4"
+					type="text"
+                    default="Image Four"
+                    size="88"
+					filter="safehtml"
+					label="Name [4]:"
+					description="Please Enter Category Name" />
+				<field
+					name="description4"
+					type="textarea"
+                    default="Image four goes here. Image four goes here. Image four goes here. Image four goes here. Image four goes here. Image four goes here. Image four goes here."
+                    cols="50"
+                    rows="5"
+					filter="safehtml"
+					label="Description [4]:"
+					description="Please Enter Category Description" />
+				<field
+					name="thum4"
+					type="text"
+                    default="modules/mod_jphotostack/tmpl/albums/album4/thumb/thumb.jpg"
+                    size="88"
+					filter="safehtml"
+					label="Thum [4]:"
+					description="Please Enter Category Thum Image" />
+				<field
+					name="name5"
+					type="text"
+                    default="Image Five"
+                    size="88"
+					filter="safehtml"
+					label="Name [5]:"
+					description="Please Enter Category Name" />
+				<field
+					name="description5"
+					type="textarea"
+                    default="Image five goes here. Image five goes here. Image five goes here. Image five goes here. Image five goes here. Image five goes here. Image five goes here."
+                    cols="50"
+                    rows="5"
+					filter="safehtml"
+					label="Description [5]:"
+					description="Please Enter Category Description" />
+				<field
+					name="thum5"
+					type="text"
+                    default="modules/mod_jphotostack/tmpl/albums/album5/thumb/thumb.jpg"
+                    size="88"
+					filter="safehtml"
+					label="Thum [5]:"
+					description="Please Enter Category Thum Image" />
+				<field
+					name="name6"
+					type="text"
+                    default="Image Six"
+                    size="88"
+					filter="safehtml"
+					label="Name [6]:"
+					description="Please Enter Category Name" />
+				<field
+					name="description6"
+					type="textarea"
+                    default="Image six goes here. Image six goes here. Image six goes here. Image six goes here. Image six goes here. Image six goes here. Image six goes here."
+                    cols="50"
+                    rows="5"
+					filter="safehtml"
+					label="Description [6]:"
+					description="Please Enter Category Description" />
+				<field
+					name="thum6"
+					type="text"
+                    default="modules/mod_jphotostack/tmpl/albums/album6/thumb/thumb.jpg"
+                    size="88"
+					filter="safehtml"
+					label="Thum [6]:"
+					description="Please Enter Category Thum Image" />
+				<field
+					name="name7"
+					type="text"
+                    default="Image Seven"
+                    size="88"
+					filter="safehtml"
+					label="Name [7]:"
+					description="Please Enter Category Name" />
+				<field
+					name="description7"
+					type="textarea"
+                    default="Image seven goes here. Image seven goes here. Image seven goes here. Image seven goes here. Image seven goes here. Image seven goes here. Image seven goes here."
+                    cols="50"
+                    rows="5"
+					filter="safehtml"
+					label="Description [7]:"
+					description="Please Enter Category Description" />
+				<field
+					name="thum7"
+					type="text"
+                    default="modules/mod_jphotostack/tmpl/albums/album7/thumb/thumb.jpg"
+                    size="88"
+					filter="safehtml"
+					label="Thum [7]:"
+					description="Please Enter Category Thum Image" />
+				<field
+					name="name8"
+					type="text"
+                    default="Image Eight"
+                    size="88"
+					filter="safehtml"
+					label="Name [8]:"
+					description="Please Enter Category Name" />
+				<field
+					name="description8"
+					type="textarea"
+                    default="Image eight goes here. Image eight goes here. Image eight goes here. Image eight goes here. Image eight goes here. Image eight goes here."
+                    cols="50"
+                    rows="5"
+					filter="safehtml"
+					label="Description [8]:"
+					description="Please Enter Category Description" />
+				<field
+					name="thum8"
+					type="text"
+                    default="modules/mod_jphotostack/tmpl/albums/album8/thumb/thumb.jpg"
+                    size="88"
+					filter="safehtml"
+					label="Thum [8]:"
+					description="Please Enter Category Thum Image" />
+				<field
+					name="name9"
+					type="text"
+                    default="Image Nine"
+                    size="88"
+					filter="safehtml"
+					label="Name [9]:"
+					description="Please Enter Category Name" />
+				<field
+					name="description9"
+					type="textarea"
+                    default="Image nine goes here. Image nine goes here. Image nine goes here. Image nine goes here. Image nine goes here. Image nine goes here."
+                    cols="50"
+                    rows="5"
+					filter="safehtml"
+					label="Description [9]:"
+					description="Please Enter Category Description" />
+				<field
+					name="thum9"
+					type="text"
+                    default="modules/mod_jphotostack/tmpl/albums/album9/thumb/thumb.jpg"
+                    size="88"
+					filter="safehtml"
+					label="Thum [9]:"
+					description="Please Enter Category Thum Image" />
+				<field
+					name="name10"
+					type="text"
+                    default="Image Ten"
+                    size="88"
+					filter="safehtml"
+					label="Name [10]:"
+					description="Please Enter Category Name" />
+				<field
+					name="description10"
+					type="textarea"
+                    default="Image ten goes here. Image ten goes here. Image ten goes here. Image ten goes here. Image ten goes here. Image ten goes here."
+                    cols="50"
+                    rows="5"
+					filter="safehtml"
+					label="Description [10]:"
+					description="Please Enter Category Description" />
+				<field
+					name="thum10"
+					type="text"
+                    default="modules/mod_jphotostack/tmpl/albums/album10/thumb/thumb.jpg"
+                    size="88"
+					filter="safehtml"
+					label="Thum [10]:"
+					description="Please Enter Category Thum Image" />
+
+			</fieldset>
+			<fieldset
+				name="advanced">
+				<field
+					name="layout"
+					type="modulelayout"
+					label="JFIELD_ALT_LAYOUT_LABEL"
+					description="JFIELD_ALT_MODULE_LAYOUT_DESC" />
+				<field
+					name="moduleclass_sfx"
+					type="text"
+					label="COM_MODULES_FIELD_MODULECLASS_SFX_LABEL"
+					description="COM_MODULES_FIELD_MODULECLASS_SFX_DESC" />
+				<field
+					name="cache"
+					type="list"
+					default="0"
+					label="COM_MODULES_FIELD_CACHING_LABEL"
+					description="COM_MODULES_FIELD_CACHING_DESC">
+					<option
+						value="0">COM_MODULES_FIELD_VALUE_NOCACHING</option>
+				</field>
+			</fieldset>
+		</fields>
+	</config>
+</extension>

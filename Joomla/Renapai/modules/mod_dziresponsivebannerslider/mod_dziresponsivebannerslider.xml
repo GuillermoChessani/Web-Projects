@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension type="module" version="2.5" client="site" method="upgrade">
+	<name>DZI Responsive Banner Slider</name>
+	<author>Prakash Malviya</author>
+	<creationDate>Aug 2013</creationDate>
+	<copyright>Copyright (C) 2005 - 2013 Devzoneindian. All rights reserved.</copyright>
+	<license>GNU/GPL http://www.gnu.org/copyleft/gpl.html</license>
+	<authorEmail>prakash_malaviya@yahoo.co.in</authorEmail>
+	<authorUrl>http://devzoneindian.co.in/</authorUrl>
+	<version>2.5.0</version>
+	<description>Responsive joomla banner slider with various options.</description>
+	<files>
+		<filename module="mod_dziresponsivebannerslider">mod_dziresponsivebannerslider.php</filename>
+		<folder>tmpl</folder>
+		<folder>css</folder>
+		<folder>js</folder>
+		<folder>images</folder>
+		<folder>language</folder>
+		<filename>helper.php</filename>
+		<filename>index.html</filename>
+		<filename>mod_dziresponsivebannerslider.xml</filename>
+	</files>
+	<languages>
+		<language tag="en-GB">language/en-GB.mod_dziresponsivebannerslider.ini</language>
+		<language tag="en-GB">language/en-GB.mod_dziresponsivebannerslider.sys.ini</language>
+	</languages>	
+	<help key="JHELP_EXTENSIONS_MODULE_MANAGER_DZIRESPONSIVEBANNERSLIDER" />
+	<config>
+		<fields name="params">			
+			<fieldset name="basic">
+				<field name="catid" type="category" extension="com_banners" label="BANNER_CAT_LABEL" 
+					 default="" description="BANNER_CAT_LABEL_DESC" required="true" >
+					<option value="">SELECT BANNER CATEGORY</option>
+				</field>
+				<field name="type" type="list" default="1" label="SLIDER_TYPE_LABEL" description="SLIDER_TYPE_DESC" required="true">
+					<option value="1">Basic Slider</option>
+					<option value="2">Slider with thumbnail control nav pattern</option>
+					<option value="3">Slider with thumbnail slider</option>
+					<option value="4">Basic Carousel</option>
+					<option value="5">Carousel with min and max ranges</option>
+					<option value="6">Carousel with dynamic min/max ranges</option>
+				</field>
+				<field name="onclickredirect" type="list" default="1" label="ON_CLICK_REDIRECT_ON_URL_LABEL" description="ON_CLICK_REDIRECT_ON_URL_DESC">
+					<option value="0">JOOMEXT_NO</option>
+					<option value="1">JOOMEXT_YES</option>
+				</field>
+				<field name="target" type="list" default="0" label="TARGET" description="TARGET_DESC">
+					<option value="_blank">_blank</option>
+					<option value="_self">_self</option>
+					<option value="_parent">_parent</option>
+					<option value="_top">_top</option>
+				</field>
+				<field name="navigation" type="list" default="0" label="NAVIGATION" description="NAVIGATION_DESC">
+					<option value="true">JOOMEXT_YES</option>
+					<option value="false">JOOMEXT_NO</option>					
+				</field>	
+				<field name="layout" type="modulelayout" label="JFIELD_ALT_LAYOUT_LABEL" description="JFIELD_ALT_MODULE_LAYOUT_DESC" />
+				<field name="moduleclass_sfx" type="text" label="COM_MODULES_FIELD_MODULECLASS_SFX_LABEL" description="COM_MODULES_FIELD_MODULECLASS_SFX_DESC" />
+				<field name="cache" type="list" default="1" label="COM_MODULES_FIELD_CACHING_LABEL" description="COM_MODULES_FIELD_CACHING_DESC">
+					<option value="1">JGLOBAL_USE_GLOBAL</option>
+					<option value="0">COM_MODULES_FIELD_VALUE_NOCACHING</option>
+				</field>
+				<field name="cache_time" type="text" default="900" label="COM_MODULES_FIELD_CACHE_TIME_LABEL" description="COM_MODULES_FIELD_CACHE_TIME_DESC" />
+			</fieldset>
+		</fields>
+	</config>
+</extension>

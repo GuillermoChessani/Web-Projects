@@ -1,0 +1,69 @@
+<?xml version="1.0" ?>
+<extension type="component" version="3.0" method="upgrade">
+    <name>Remository</name>
+    <creationDate>July 2014</creationDate>
+    <author>Martin Brampton and collaborators</author>
+    <authorEmail>martin@remository.com</authorEmail>
+    <authorUrl>www.remository.com</authorUrl>
+    <copyright>Remository is copyright (c) 2004-2014 Remository Software Limited</copyright>
+	<license>Open Source software licensed under GNU GPL version 2</license>
+    <version>3.56J3</version>
+    <description>Remository for Joomla 3.x File Repository with extensive functionality</description>
+    <files folder="site">
+        <filename>remository.php</filename>
+        <filename>remository.main.php</filename>
+        <filename>remository.class.php</filename>
+        <filename>remository.html.php</filename>
+        <filename>remository.css</filename>
+        <filename>remository.module.css</filename>
+        <filename>remository.interface.php</filename>
+        <filename>sef_ext.php</filename>
+        <filename>router.php</filename>
+        <filename>sef.custom.php</filename>
+		<filename>com_remository_constants.php</filename>
+		<filename>dtree.css</filename>
+		<filename>dtree.js</filename>
+		<filename>index.html</filename>
+		<folder>views</folder>
+		<folder>aliro</folder>
+		<folder>p-classes</folder>
+		<folder>c-classes</folder>
+		<folder>v-classes</folder>
+		<folder>c-admin-classes</folder>
+		<folder>v-admin-classes</folder>
+		<folder>g-classes</folder>
+		<folder>m-classes</folder>
+		<folder>xspf_player</folder>
+		<folder>language</folder>
+		<folder>interfaces</folder>
+		<folder>images</folder>
+		<folder>xspf_player</folder>
+		<folder>xspf_player</folder>
+    </files>
+     <!-- Runs on install/uninstall/update; -->
+        <scriptfile>script.php</scriptfile>
+    <uninstall>
+        <sql>
+        </sql>
+    </uninstall>
+		<administration>
+			<menu act="cpanel">Remository</menu>
+			<files folder="admin">
+				<filename>admin.remository.php</filename>
+				<filename>remository.php</filename>
+				<filename>toolbar.remository.php</filename>
+				<filename>admin.css</filename>
+				<filename>read_me.txt</filename>
+				<filename>config.xml</filename>
+				<filename>remository.sql</filename>
+				<filename>remository.utf8.sql</filename>
+				<folder>elements</folder>
+				<folder>language</folder>
+				<folder>models</folder>
+				<folder>views</folder>
+			</files>
+			<languages folder="admin">
+				<language tag="en-GB">language/en-GB/en-GB.com_remository.sys.ini</language>
+			</languages>
+		</administration>
+</extension>

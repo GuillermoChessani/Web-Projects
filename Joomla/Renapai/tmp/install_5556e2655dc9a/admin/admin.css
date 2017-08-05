@@ -1,0 +1,276 @@
+/* Admin side CSS for Remository */
+
+/*
+.icon-48-remository {
+    background-image: url(/components/com_remository/images/remository-48.png);
+}
+
+.remositoryred {
+    color: red;
+}
+
+#remositoryedit {
+	width: 960px;
+	padding: 0;
+	margin: 0;
+}
+
+#remositoryedit label, #remositoryedit input {
+	font-size: 11px;
+}
+.remositoryblock {
+    width: 100%;
+    height: 10px;
+    background: #DDD;
+    border-bottom: 2px solid #888;
+    margin-bottom: 5px;
+}
+
+#remositoryclist {
+    margin-top: 3px;
+}
+
+
+/*#remositoryedit legend {
+    font-weight: bold;
+    font-size: 14px;
+    background: #DDD;
+    border: 1px solid #CCC;
+    border-bottom-color: #999;
+    border-right-color: #999;
+}
+.remositoryaccessselector legend {
+    color: #666;
+    font-size: 12px;
+}
+#remositoryiconlist {
+    width: 400px;
+}
+
+#remositoryiconlist div {
+    padding: 5px;
+}
+
+#remositorycontainermain {
+	width:550px;
+	padding:20px 0;
+	float:left;
+}
+
+#remositorycontainermain div {
+	padding: 5px 0 15px 0;
+}*/
+
+/*.remositoryfieldset {
+	float:right;
+	clear:right;
+	width:350px;
+	padding-top:15px;
+}
+.remositoryfieldset fieldset,.remositoryfieldset fieldset legend{border: 1px solid #FFFFFF;}#remositorycontainermain .remositoryfieldset {
+    width: 550px;
+}.remositoryfieldset div {
+    padding: 3px 0;
+}.remositoryaccessselector {
+    padding: 10px 0;
+}
+#remositorysupport {
+    text-align: left;
+    padding-left: 30px;
+}
+*/
+
+#remositoryiconlist img {
+    border: 1px solid #CCC;
+    margin: 2px;
+}
+
+.remositoryaccessselector div {
+    padding: 5px;
+}
+
+
+
+#remositorysupport form {
+    padding-left: 40px;
+}
+
+td.remositoryexplain {
+    font-weight: bold;
+    font-style: italic;
+}
+
+/* Control panel - dashboard */
+.cpanel div.icon, #cpanel div.icon {
+    text-align: center;
+    margin-right: 15px;
+    float: left;
+    margin-bottom: 15px;
+
+}
+
+.cpanel div.icon a, #cpanel div.icon a {
+    background-color: #fff;
+    background-position: -30px;
+    display: block;
+    float: left;
+    height: 110px;
+    width: 130px;
+    color: #565656;
+    vertical-align: middle;
+    text-decoration: none;
+    border: 1px solid #CCC;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    border-radius: 5px;
+}
+
+#cpanel div.icon a:hover,
+#cpanel div.icon a:focus,
+#cpanel div.icon a:active,
+.cpanel div.icon a:hover,
+.cpanel div.icon a:focus,
+.cpanel div.icon a:active {
+    background-position: 0;
+    -webkit-box-shadow: -5px 10px 15px rgba(0, 0, 0, 0.25);
+    -moz-box-shadow: -5px 10px 15px rgba(0, 0, 0, 0.25);
+    box-shadow: -5px 10px 15px rgba(0, 0, 0, 0.25);
+    position: relative;
+    z-index: 10;
+}
+
+#cpanel img,
+.cpanel img {
+    padding: 10px 0;
+    margin: 0 auto;
+}
+
+#cpanel span,
+.cpanel span {
+    display: block;
+    text-align: center;
+}
+
+div.cpanel-left {
+    width: 54%;
+    float: left;
+}
+
+div.cpanel-right {
+    width: 45%;
+    float: right;
+}
+
+/* Pane sliders */
+.pane-sliders {
+    margin: 18px 0 0 0;
+    position: relative;
+}
+
+.pane-sliders .title {
+    border: 1px solid #E5E5E5;
+    border-radius: 4px 4px 4px 4px;
+    padding: 5px 15px;
+    cursor: pointer;
+}
+
+.pane-sliders .panel {
+    margin-bottom: 3px;
+}
+
+.header_search_right {
+    float: right;
+}
+
+.js-stools-container-bar #filter_search {
+    width: 220px;
+}
+
+.js-stools-container-bar #filter_defn {
+    width: 240px;
+}
+
+.js-stools-container-bar .btn-wrapper {
+    display: inline-block;
+    margin: 0 5px 0 0;
+}
+
+/*Component CSS*/
+#remositoryedit input[type="checkbox"] {
+    margin-bottom: 18px;
+}
+
+#remositoryedit .chzn-container {
+    margin-bottom: 9px;
+    padding: 4px 6px;
+    padding: 0px;
+}
+
+
+.remositorycontainerparams .pane-sliders h3 {
+    font-size: 14px;
+}
+
+.remositorycontainerparams label {
+    float: left;
+    margin: 5px;
+}
+
+.remositorycontainerparams .access_control {
+    margin-top: 10px;
+}
+
+.remositorycontainerparams .access_control fieldset legend {
+    margin-bottom: 0px;
+}
+
+.remositorycontainerparams .access_control .remositoryaccessselector fieldset {
+    margin-left: 10px;
+}
+
+.remositorycontainerparams .access_control .remositoryaccessselector fieldset legend {
+    font-size: 16px;
+}
+
+.filter_group_users {
+    float: right;
+}
+
+.filter_group_users .inputbox {
+    margin-bottom: 0px;
+}
+
+.filter_group_users_tbl {
+    margin-bottom: 10px;
+    width: 100%;
+}
+
+.filter_group_users_tbl .user {
+    float: left;
+}
+
+.classification_search {
+    float: right;
+}
+
+table.sectiontableentry2 td {
+    line-height: 18px;
+    padding: 4px;
+    text-align: left;
+    vertical-align: top;
+}
+
+.configuration_customize tr td {
+    text-align: center;
+}
+.configuration_customize tr td.remositoryexplain{text-align: left;}
+
+.configuration_customize tr td.config_customize_legend, .configuration_customize th.config_customize_legend {
+    text-align: left;
+}
+
+.configuration_customize td.sequence input {
+    width: 25%
+}
+
+textarea[name="download_text"]{width: 500px; height: 250px;}
